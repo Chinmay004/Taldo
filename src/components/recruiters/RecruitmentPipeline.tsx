@@ -44,16 +44,16 @@ const ProcessCard = ({
 
 export default function RecruitmentPipeline() {
   return (
-    <section className="relative w-full bg-white py-16">
-      <div className="mx-auto max-w-[1324px] px-6">
+    <section className="relative w-full bg-white py-12 md:py-16 lg:py-20">
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20">
         {/* Heading Section */}
-        <div className="mb-12 flex flex-col gap-2.5">
-          <h2 className="text-3xl font-medium leading-[1.29] tracking-[-0.88px] text-black md:text-[44px]">
+        <div className="mb-8 md:mb-12 flex flex-col gap-2 md:gap-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-medium leading-tight tracking-tight text-gray-900">
             Hire Skilled,{" "}
-            <span className="text-[#0829e6]">German-Ready Nurses</span> from
+            <span className="text-accent">German-Ready Nurses</span> from
             India
           </h2>
-          <p className="text-lg font-normal leading-[1.29] tracking-[-0.4px] text-black md:text-xl">
+          <p className="text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight text-gray-900">
             Taldo partners with hospitals, Pflegeheims, and healthcare networks
             in Germany to deliver a qualified, language-certified pipeline of
             nursing talent ready for integration.
@@ -138,7 +138,7 @@ export default function RecruitmentPipeline() {
             </div>
 
             {/* Arrows - Vertical */}
-            <div className="absolute left-[82.7%] top-[41%] h-8 w-16">
+            <div className="absolute left-[84.7%] top-[41%] h-8 w-16">
               <Arrow direction="down" />
             </div>
 

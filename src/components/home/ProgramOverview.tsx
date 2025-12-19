@@ -110,18 +110,18 @@ export default function ProgramOverview() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-[1440px] px-20 py-16">
+      <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20 py-12 md:py-16 lg:py-20">
         {/* Header Section */}
-        <div className="mb-10 max-w-[900px]">
-          <h2 className="mb-4 text-[42px] font-bold leading-tight text-white">
+        <div className="mb-8 md:mb-10 max-w-4xl mx-auto lg:mx-0 text-center lg:text-left">
+          <h2 className="mb-3 md:mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight text-white">
             Gateway to Germany – Program Overview
           </h2>
-          <p className="mb-6 text-lg leading-relaxed text-white/90">
+          <p className="mb-4 md:mb-6 text-sm sm:text-base md:text-lg leading-relaxed text-white/90">
             Taldo&apos;s Gateway to Germany is a structured end-to-end program designed to prepare Indian nurses for a strong start in the German healthcare system.
           </p>
           <Link
             href="/program"
-            className="inline-flex items-center rounded-full bg-white px-6 py-3 text-base font-medium text-black transition-all hover:bg-white hover:text-[#1a1a1a]"
+            className="inline-flex items-center rounded-full bg-white px-5 md:px-6 py-2.5 md:py-3 text-sm md:text-base font-medium text-gray-900 transition-all hover:bg-white/90"
           >
             Read More
           </Link>
@@ -129,23 +129,23 @@ export default function ProgramOverview() {
 
         {/* Program Features */}
         <div>
-          <h3 className="mb-6 text-2xl font-semibold text-white">
+          <h3 className="mb-4 md:mb-6 text-lg md:text-xl lg:text-2xl font-semibold text-white">
             What the Program Includes
           </h3>
 
           {/* Feature Cards */}
-          <div className="grid grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
             {programFeatures.map((feature) => (
               <div
                 key={feature.title}
-                className="flex flex-col gap-3 rounded-2xl bg-[rgba(255,255,255,0.24)] p-5 text-white backdrop-blur-xs"
+                className="flex flex-col gap-2 md:gap-3 rounded-xl md:rounded-2xl bg-white/20 p-3 md:p-4 lg:p-5 text-white backdrop-blur-sm"
               >
                 {/* Icon */}
-                <div className="flex h-10 w-10 items-center justify-center">
+                <div className="flex h-8 w-8 md:h-10 md:w-10 items-center justify-center">
                   {feature.icon}
                 </div>
                 {/* Title */}
-                <p className="text-sm font-medium leading-snug">
+                <p className="text-xs md:text-sm font-medium leading-snug">
                   {feature.title}
                 </p>
               </div>

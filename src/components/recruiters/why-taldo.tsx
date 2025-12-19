@@ -1,44 +1,37 @@
 export default function WhyTaldo() {
+  const benefits = [
+    "High-quality, pre-screened candidates",
+    "Predictable, quarterly talent pipelines",
+    "Fully compliant with German hiring and migration norms",
+    "Reduction in dropout rates through counselling and mentorship",
+    "End-to-end administrative support",
+    "Consistent communication and structured reporting",
+  ];
+
   return (
-    <section className="relative w-full h-fit bg-[#8c9aeb] overflow-hidden">
-      <div className="relative mx-auto max-w-[1468px] h-full px-[58px] py-20">
+    <section className="relative w-full bg-primary-light overflow-hidden">
+      <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20 py-12 md:py-16 lg:py-20">
         {/* Content */}
-        <div className="relative z-10">
+        <div className="relative z-10 text-center md:text-left">
           {/* Heading */}
-          <h2 className="font-medium text-[44px] leading-[1.29] tracking-[-0.88px] text-white mb-[82px]">
+          <h2 className="font-medium text-2xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight tracking-tight text-white mb-8 md:mb-12 lg:mb-16">
             Why Partner with Taldo
           </h2>
 
           {/* List */}
-          <ul className="space-y-0 text-white font-medium text-[24px] tracking-[-0.48px] pl-6">
-            <li className="flex items-start leading-[2.11] mb-0">
-              <span className="mr-[12px]">•</span>
-              <span>High-quality, pre-screened candidates</span>
-            </li>
-            <li className="flex items-start leading-[2.11] mb-0">
-              <span className="mr-[12px]">•</span>
-              <span>Predictable, quarterly talent pipelines</span>
-            </li>
-            <li className="flex items-start leading-[2.11] mb-0">
-              <span className="mr-[12px]">•</span>
-              <span>Fully compliant with German hiring and migration norms</span>
-            </li>
-            <li className="flex items-start leading-[2.11] mb-0">
-              <span className="mr-[12px]">•</span>
-              <span>Reduction in dropout rates through counselling and mentorship</span>
-            </li>
-            <li className="flex items-start leading-[2.11] mb-0">
-              <span className="mr-[12px]">•</span>
-              <span>End-to-end administrative support</span>
-            </li>
-            <li className="flex items-start leading-[2.11] mb-0">
-              <span className="mr-[12px]">•</span>
-              <span>Consistent communication and structured reporting</span>
-            </li>
+          <ul className="space-y-2 md:space-y-3 text-white pl-1 inline-block text-left">
+            {benefits.map((benefit, index) => (
+              <li key={index} className="flex items-start text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
+                <span className="mr-3 md:mr-4">•</span>
+                <span>{benefit}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
-      <div className="absolute -right-7 -bottom-70 pointer-events-none">
+
+      {/* Background SVG - hidden on mobile */}
+      <div className="hidden md:block absolute -right-7 -bottom-20 lg:-bottom-70 pointer-events-none">
         <svg xmlns="http://www.w3.org/2000/svg" width="616" height="791" viewBox="0 0 616 791" fill="none">
           <path d="M797.734 363.869C473.663 429.998 321.117 596.717 292.642 667.557C284.218 688.644 279.613 709.825 278.749 731.14C277.752 730.779 276.792 730.437 275.794 730.076C237.84 716.322 210.324 682.185 207.216 642.291C206.064 627.302 208.175 611.8 214.085 596.85L214.526 595.824C280.994 461.248 418.19 370.727 776.377 264.021C772.539 253.192 768.222 242.592 763.483 232.219C568.242 284.024 342.857 359.31 222.816 501.446C186.128 544.874 165.673 593.373 164.579 649.985C164.579 650.232 164.579 650.479 164.579 650.706C164.541 653.708 164.349 660.68 164.215 664.992C164.215 664.954 164.176 664.954 164.176 664.954C160.627 661.915 157.633 658.305 155.311 654.278C124.265 600.763 119.237 549.471 139.942 497.951C156.885 455.834 206.007 394.379 297.688 333.987C465.892 223.158 652.268 170.745 714.956 152.736C639.814 57.2752 521.5 -3.21161 389.043 0.131874C175.766 5.50805 3.01431 178.648 0.0401382 389.838C-3.08754 610.888 176.975 791 399.482 791C621.989 791 799 613.947 799 395.499C799 384.861 798.559 374.299 797.714 363.869H797.734ZM471.188 116.907C494.751 116.907 513.882 135.847 513.882 159.176C513.882 182.504 494.751 201.444 471.188 201.444C447.625 201.444 428.494 182.504 428.494 159.176C428.494 135.847 447.625 116.907 471.188 116.907ZM296.825 73.1377C316.435 73.1377 332.38 88.8863 332.38 108.301C332.38 127.716 316.435 143.465 296.825 143.465C277.214 143.465 261.307 127.716 261.307 108.301C261.307 88.8863 277.214 73.1377 296.825 73.1377ZM189.409 123.765C207.906 110.752 233.791 116.926 244.21 136.892C253.287 154.141 247.281 175.418 230.51 185.544C145.276 236.798 84.0654 290.142 47.4927 345.233C63.7835 253.914 116.244 175.228 189.409 123.765ZM106.439 484.786C96.8832 508.513 91.9326 532.43 91.4913 556.481C91.3762 564.897 91.8175 573.369 92.8153 581.823C76.275 555.246 63.2078 526.332 54.151 495.728C46.0727 462.388 48.7591 427.282 61.692 395.328C65.2034 386.628 68.4846 379.352 70.4034 376.065C122.806 287.482 226.116 222.189 350.974 163.735C369.778 154.958 392.229 160.619 404.49 177.223C404.682 177.451 404.854 177.698 405.008 177.926C420.953 199.487 413.355 230.13 389.158 241.794C226.672 320.062 142.494 395.005 106.439 484.767V484.786ZM410.496 751.22C405.219 751.505 399.904 751.657 394.55 751.695C390.521 751.619 386.434 751.505 382.404 751.334C376.533 751.049 370.661 750.099 365.154 748.086C334.952 736.934 318.066 702.018 331.555 670.254C334.99 662.143 338.943 654.354 343.299 647.439C383.69 583.172 443.154 543.943 531.554 497.59C554.561 485.527 582.998 496.279 591.959 520.443L592.285 521.279C599.711 541.321 591.038 563.795 571.984 573.882C494.54 614.726 445.035 649.966 420.147 711.934C414.909 724.947 411.724 738.036 410.477 751.201L410.496 751.22ZM575.035 700.156C536.735 723.655 493.504 739.974 447.299 747.345C448.584 739.955 450.618 732.508 453.612 725.118C465.604 695.255 491.835 665.315 531.19 636.174C549.131 622.895 574.728 627.435 587.066 645.938C599.212 664.137 593.782 688.682 575.035 700.156ZM626.287 648.066C607.866 648.066 592.938 633.267 592.938 615.049C592.938 596.831 607.885 582.032 626.287 582.032C644.688 582.032 659.597 596.831 659.597 615.049C659.597 633.267 644.707 648.066 626.287 648.066ZM648.257 525.744C625.538 525.744 607.118 507.468 607.118 484.976C607.118 462.483 625.538 444.246 648.257 444.246C670.976 444.246 689.397 462.483 689.397 484.976C689.397 507.468 670.976 525.744 648.257 525.744Z" fill="white" fillOpacity="0.1" />
         </svg>

@@ -38,7 +38,7 @@ export default function OtherBlogs({ blogs, currentBlogId, heading, limit }: Oth
         if (scrollContainerRef.current) {
             const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
             setCanScrollLeft(scrollLeft > 0);
-            setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10); // 10px threshold
+            setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
         }
     };
 
@@ -54,7 +54,7 @@ export default function OtherBlogs({ blogs, currentBlogId, heading, limit }: Oth
     // Scroll left/right by one card width + gap
     const scroll = (direction: 'left' | 'right') => {
         if (scrollContainerRef.current) {
-            const scrollAmount = 380 + 28; // card width (md) + gap
+            const scrollAmount = 380 + 28;
             const newScrollLeft = direction === 'left'
                 ? scrollContainerRef.current.scrollLeft - scrollAmount
                 : scrollContainerRef.current.scrollLeft + scrollAmount;
@@ -67,20 +67,20 @@ export default function OtherBlogs({ blogs, currentBlogId, heading, limit }: Oth
     };
 
     return (
-        <section className="w-full bg-background py-12 md:py-16 lg:py-20">
+        <section className="w-full bg-white py-12 md:py-16 lg:py-20">
             {/* Section Title and Navigation Buttons */}
-            <div className="w-full max-w-[1440px] mx-auto px-20 mb-6 lg:mb-6">
-                <div className="flex items-center justify-between">
-                    <h2 className="font-medium text-[28px] md:text-[36px] leading-[1.2] text-black">
+            <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-20 mb-6">
+                <div className="flex items-center justify-center md:justify-between flex-col md:flex-row gap-4">
+                    <h2 className="font-medium text-2xl sm:text-3xl md:text-4xl leading-tight text-gray-900 text-center md:text-left">
                         {heading}
                     </h2>
 
                     {/* Navigation Buttons */}
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2 md:gap-3">
                         <button
                             onClick={() => scroll('left')}
                             disabled={!canScrollLeft}
-                            className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-black transition-all hover:bg-black hover:text-white disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-black"
+                            className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-gray-900 transition-all hover:bg-gray-900 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-gray-900"
                             aria-label="Scroll left"
                         >
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,7 +90,7 @@ export default function OtherBlogs({ blogs, currentBlogId, heading, limit }: Oth
                         <button
                             onClick={() => scroll('right')}
                             disabled={!canScrollRight}
-                            className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-black transition-all hover:bg-black hover:text-white disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-black"
+                            className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-gray-900 transition-all hover:bg-gray-900 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-gray-900"
                             aria-label="Scroll right"
                         >
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,15 +106,20 @@ export default function OtherBlogs({ blogs, currentBlogId, heading, limit }: Oth
                 ref={scrollContainerRef}
                 className="w-full overflow-x-auto scrollbar-hide"
             >
-                <div className="flex gap-6 md:gap-7 pl-20">
+                <div
+                    className="flex gap-4 md:gap-6 lg:gap-7"
+                    style={{
+                        paddingLeft: 'max(1rem, calc((100vw - 1400px) / 2 + 5rem))'
+                    }}
+                >
                     {displayBlogs.map((blog) => (
                         <Link
                             key={blog.id}
                             href={`/blog/${blog.id}`}
-                            className="group flex flex-col flex-shrink-0 w-[320px] md:w-[380px]"
+                            className="group flex flex-col flex-shrink-0 w-64 sm:w-72 md:w-80 lg:w-[380px]"
                         >
                             {/* Blog Image */}
-                            <div className="relative w-full aspect-[400/310] rounded-[10px] overflow-hidden bg-gray-200 mb-6">
+                            <div className="relative w-full aspect-[400/310] rounded-lg md:rounded-xl overflow-hidden bg-gray-200 mb-4 md:mb-6">
                                 <Image
                                     src={blog.image}
                                     alt={blog.title}
@@ -124,21 +129,21 @@ export default function OtherBlogs({ blogs, currentBlogId, heading, limit }: Oth
                             </div>
 
                             {/* Blog Info */}
-                            <div className="flex flex-col gap-3">
+                            <div className="flex flex-col gap-2 md:gap-3">
                                 {/* Date */}
-                                <p className="font-normal text-base md:text-lg leading-[1.25] text-black">
+                                <p className="font-normal text-sm md:text-base lg:text-lg leading-tight text-gray-900">
                                     {blog.date}
                                 </p>
 
                                 {/* Title */}
-                                <h3 className="font-bold text-xl md:text-xl leading-[1.4] text-black group-hover:opacity-70 transition-opacity">
+                                <h3 className="font-bold text-base md:text-lg lg:text-xl leading-snug text-gray-900 group-hover:opacity-70 transition-opacity">
                                     {blog.title}
                                 </h3>
                             </div>
                         </Link>
                     ))}
                     {/* Spacer to create equal padding on the right */}
-                    <div className="flex-shrink-0 w-20" aria-hidden="true" />
+                    <div className="flex-shrink-0 w-4 sm:w-6 lg:w-20" aria-hidden="true" />
                 </div>
             </div>
         </section>

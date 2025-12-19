@@ -111,36 +111,37 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full">
-      <div className="mx-auto max-w-[1440px] px-20 pb-8 pt-20">
-        {/* Main Footer Content */}
-        <div className="flex justify-between pr-30">
+    <footer className="w-full bg-white">
+      {/* Main Footer Content */}
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20 pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8 lg:gap-12">
           {/* Logo */}
-          <div className="shrink-0">
+          <div className="shrink-0 lg:w-1/5">
             <Link href="/">
               <Image
                 src="/logo.webp"
                 alt="Taldo"
                 width={104}
                 height={38}
+                className="h-8 w-auto md:h-10"
               />
             </Link>
           </div>
 
           {/* Navigation Columns */}
           {footerColumns.map((column, colIndex) => (
-            <div key={colIndex} className="flex flex-col gap-12">
+            <div key={colIndex} className="flex flex-col gap-8 md:gap-12 lg:w-1/5 w-full items-center lg:items-start">
               {column.sections.map((section) => (
-                <div key={section.title} className="flex flex-col">
-                  <h4 className="mb-4 text-sm font-semibold tracking-wide text-[#1a1a1a]">
+                <div key={section.title} className="flex flex-col items-center lg:items-start w-full">
+                  <h4 className="mb-3 md:mb-4 text-xs md:text-sm font-semibold tracking-wide text-gray-900 text-center lg:text-left">
                     {section.title}
                   </h4>
-                  <ul className="flex flex-col gap-2">
+                  <ul className="flex flex-col gap-1.5 md:gap-2 items-center lg:items-start w-full">
                     {section.links.map((link) => (
-                      <li key={link.name}>
+                      <li key={link.name} className="w-full text-center lg:text-left">
                         <Link
                           href={link.href}
-                          className="text-sm text-[#6c727f] transition-colors hover:text-[#2d3a6d]"
+                          className="text-xs md:text-sm text-gray-text transition-colors hover:text-primary"
                         >
                           {link.name}
                         </Link>
@@ -152,26 +153,28 @@ export default function Footer() {
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Divider */}
-        <div className="my-8 h-px w-full bg-[#e0e0e0]" />
+      {/* Full Width Divider */}
+      <div className="w-full h-px bg-gray-200" />
 
-        {/* Bottom Section */}
-        <div className="flex items-center justify-between">
+      {/* Bottom Section */}
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20 py-6 md:py-8">
+        <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4">
           {/* Copyright */}
-          <p className="text-sm text-[#6c727f]">
+          <p className="text-xs md:text-sm text-gray-text text-center sm:text-left">
             ©2021 Estatery. All rights reserved
           </p>
 
           {/* Social Links */}
-          <div className="flex items-center gap-10">
+          <div className="flex items-center gap-6 md:gap-10">
             {socialLinks.map((social) => (
               <Link
                 key={social.name}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#6c727f] transition-colors hover:text-[#2d3a6d]"
+                className="text-gray-text transition-colors hover:text-primary"
                 aria-label={social.name}
               >
                 {social.icon}

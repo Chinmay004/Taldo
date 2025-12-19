@@ -5,7 +5,6 @@ import { useState, useRef } from "react";
 const stories = [
   {
     id: 1,
-    // Replace with actual YouTube Shorts embed URL
     embedUrl: "https://www.youtube.com/embed/VIDEO_ID_1",
     title: "Success Story 1",
   },
@@ -31,13 +30,13 @@ const stories = [
   },
   {
     id: 6,
-    embedUrl: "https://www.youtube.com/embed/VIDEO_ID_5",
-    title: "Success Story 5",
+    embedUrl: "https://www.youtube.com/embed/VIDEO_ID_6",
+    title: "Success Story 6",
   },
   {
     id: 7,
-    embedUrl: "https://www.youtube.com/embed/VIDEO_ID_5",
-    title: "Success Story 5",
+    embedUrl: "https://www.youtube.com/embed/VIDEO_ID_7",
+    title: "Success Story 7",
   },
 ];
 
@@ -56,7 +55,7 @@ export default function SuccessStories() {
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
-      const scrollAmount = 283; // card width + gap
+      const scrollAmount = 283;
       scrollRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
@@ -66,24 +65,23 @@ export default function SuccessStories() {
   };
 
   return (
-    <section className="w-full overflow-hidden bg-white py-16">
+    <section className="w-full overflow-hidden bg-white py-12 md:py-16 lg:py-20">
       {/* Header - contained */}
-      <div className="mx-auto mb-8 flex max-w-[1440px] items-center justify-between px-20">
-        <h2 className="text-[42px] font-bold leading-tight text-[#1a1a1a]">
-          Success <span className="text-[#3B5BDB]">Stories</span>
+      <div className="mx-auto mb-6 md:mb-8 flex max-w-[1400px] items-center justify-center md:justify-between flex-col md:flex-row gap-4 px-4 sm:px-6 lg:px-20">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight text-gray-900 text-center md:text-left">
+          Success <span className="text-accent">Stories</span>
         </h2>
 
         {/* Navigation Arrows */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 md:gap-3">
           {/* Left Arrow */}
           <button
             onClick={() => scroll("left")}
             disabled={!canScrollLeft}
-            className={`flex h-[50px] w-[50px] items-center justify-center rounded-full border-2 transition-all ${
-              canScrollLeft
-                ? "border-[#3B5BDB] text-[#3B5BDB] hover:bg-[#3B5BDB] hover:text-white"
-                : "border-[#d1d5db] text-[#d1d5db] cursor-not-allowed"
-            }`}
+            className={`flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full border-2 transition-all ${canScrollLeft
+              ? "border-accent text-accent hover:bg-accent hover:text-white"
+              : "border-gray-300 text-gray-300 cursor-not-allowed"
+              }`}
             aria-label="Scroll left"
           >
             <svg
@@ -104,11 +102,10 @@ export default function SuccessStories() {
           <button
             onClick={() => scroll("right")}
             disabled={!canScrollRight}
-            className={`flex h-[50px] w-[50px] items-center justify-center rounded-full transition-all ${
-              canScrollRight
-                ? "bg-[#3B5BDB] text-white hover:bg-[#2D4BC1]"
-                : "bg-[#d1d5db] text-white cursor-not-allowed"
-            }`}
+            className={`flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full transition-all ${canScrollRight
+              ? "bg-accent text-white hover:bg-primary-dark"
+              : "bg-gray-300 text-white cursor-not-allowed"
+              }`}
             aria-label="Scroll right"
           >
             <svg
@@ -127,17 +124,19 @@ export default function SuccessStories() {
         </div>
       </div>
 
-      {/* Stories Carousel - extends to right edge */}
+      {/* Stories Carousel - respects container alignment */}
       <div
         ref={scrollRef}
         onScroll={checkScrollability}
-        className="flex gap-[25px] overflow-x-auto pl-20 pr-0"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-hide"
+        style={{
+          paddingLeft: 'max(1rem, calc((100vw - 1400px) / 2 + 5rem))'
+        }}
       >
         {stories.map((story) => (
           <div
             key={story.id}
-            className="relative h-[462px] w-[258px] shrink-0 overflow-hidden rounded-2xl bg-[#f5f6fa]"
+            className="relative h-80 sm:h-96 md:h-[420px] lg:h-[462px] w-52 sm:w-56 md:w-64 lg:w-[258px] shrink-0 overflow-hidden rounded-xl md:rounded-2xl bg-card-bg"
           >
             {/* YouTube Embed Placeholder */}
             <iframe
@@ -149,8 +148,8 @@ export default function SuccessStories() {
             />
           </div>
         ))}
-        {/* Right spacer to match left padding (80px - 25px gap = 55px) */}
-        <div className="w-[55px] shrink-0" aria-hidden="true" />
+        {/* Right spacer */}
+        <div className="w-4 sm:w-6 lg:w-20 shrink-0" aria-hidden="true" />
       </div>
     </section>
   );

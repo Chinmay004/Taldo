@@ -45,39 +45,39 @@ export default function FAQ() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full py-20">
-      <div className="mx-auto max-w-[1440px] px-20">
+    <section className="w-full bg-white py-12 md:py-16 lg:py-20">
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20">
         {/* Title */}
-        <h2 className="mb-10 text-[42px] font-bold leading-tight text-[#1a1a1a]">
+        <h2 className="mb-8 md:mb-10 text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight text-gray-900 text-center md:text-left">
           Frequently Asked Questions
         </h2>
 
         {/* FAQ Content */}
-        <div className="flex gap-3">
+        <div className="flex flex-col lg:flex-row gap-4 md:gap-6">
           {/* Questions List */}
-          <div className="flex w-[640px] flex-col bg-white rounded-xl">
+          <div className="flex w-full lg:w-1/2 flex-col bg-white rounded-xl border-2 border-gray-100">
             {faqs.map((faq, index) => (
               <button
                 key={index}
                 onClick={() => setSelectedIndex(selectedIndex === index ? null : index)}
-                className={`flex h-[72px] items-center justify-between px-4 cursor-pointer transition-all rounded-xl ${selectedIndex === index
-                  ? "bg-[#E8EBFA]"
-                  : "bg-white hover:bg-[#F0F1F5]"
+                className={`flex min-h-16 md:min-h-[72px] items-center justify-between px-3 md:px-4 py-3 cursor-pointer transition-all rounded-xl border-b-2 border-gray-100 ${selectedIndex === index
+                  ? "bg-accent/10"
+                  : "bg-white hover:bg-gray-100"
                   }`}
               >
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 md:gap-4">
                   {/* Circle bullet */}
                   <div
-                    className={`h-3 w-3 rounded-full ${selectedIndex === index
-                      ? "bg-[#3B5BDB]"
-                      : "bg-[#B8C0E8]"
+                    className={`h-2.5 w-2.5 md:h-3 md:w-3 rounded-full shrink-0 ${selectedIndex === index
+                      ? "bg-accent"
+                      : "bg-accent/40"
                       }`}
                   />
                   {/* Question text */}
                   <span
-                    className={`text-left text-base ${selectedIndex === index
-                      ? "font-medium text-[#1a1a1a]"
-                      : "text-[#1a1a1a]"
+                    className={`text-left text-sm md:text-base ${selectedIndex === index
+                      ? "font-medium text-gray-900"
+                      : "text-gray-900"
                       }`}
                   >
                     {faq.question}
@@ -93,6 +93,7 @@ export default function FAQ() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
+                  className="shrink-0"
                 >
                   <polyline points="9 18 15 12 9 6" />
                 </svg>
@@ -102,11 +103,11 @@ export default function FAQ() {
 
           {/* Answer Panel */}
           {selectedIndex !== null && (
-            <div className="h-fit w-[630px] rounded-2xl bg-[#FAFBFF] p-10 shadow-sm">
-              <h3 className="mb-5 text-xl font-semibold text-black">
+            <div className="h-fit w-full lg:w-1/2 rounded-xl md:rounded-2xl bg-card-bg p-6 md:p-8 lg:p-10 shadow-sm">
+              <h3 className="mb-4 md:mb-5 text-lg md:text-xl font-semibold text-gray-900">
                 {faqs[selectedIndex].question}
               </h3>
-              <p className="text-base leading-relaxed text-black">
+              <p className="text-sm md:text-base leading-relaxed text-gray-900">
                 {faqs[selectedIndex].answer}
               </p>
             </div>

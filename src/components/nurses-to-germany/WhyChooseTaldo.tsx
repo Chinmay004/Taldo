@@ -1,52 +1,40 @@
 import Image from "next/image";
 
 const features = [
-  {
-    title: "Ethical, transparent processes",
-  },
-  {
-    title: "High-quality language instruction with small batches",
-  },
-  {
-    title: "Faster documentation support",
-  },
-  {
-    title: "Interview readiness backed by German experts",
-  },
-  {
-    title: "Support continues until full recognition and integration",
-  },
-  {
-    title: "Dedicated candidate managers",
-  },
+  { title: "Ethical, transparent processes" },
+  { title: "High-quality language instruction with small batches" },
+  { title: "Faster documentation support" },
+  { title: "Interview readiness backed by German experts" },
+  { title: "Support continues until full recognition and integration" },
+  { title: "Dedicated candidate managers" },
 ];
 
 export default function WhyChooseTaldo() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#7B8FE8]">
-      {/* Decorative curved line on the left */}
-      <div className="absolute -left-10 -bottom-10 h-full w-[800px]">
+    <section className="relative w-full overflow-hidden bg-primary-light py-12 md:py-16 lg:py-0">
+      {/* Decorative curved line - hidden on mobile */}
+      <div className="hidden lg:block absolute -left-10 -bottom-10 h-full w-[800px]">
         <svg xmlns="http://www.w3.org/2000/svg" width="659" height="791" viewBox="0 0 659 791" fill="none">
           <path d="M657.734 363.869C333.663 429.998 181.117 596.717 152.642 667.557C144.218 688.644 139.613 709.825 138.749 731.14C137.752 730.779 136.792 730.437 135.794 730.076C97.84 716.322 70.3241 682.185 67.2156 642.291C66.0643 627.302 68.175 611.8 74.085 596.85L74.5263 595.824C140.994 461.248 278.19 370.727 636.377 264.021C632.539 253.192 628.222 242.592 623.483 232.219C428.242 284.024 202.857 359.31 82.8156 501.446C46.1277 544.874 25.673 593.373 24.5793 649.985C24.5793 650.232 24.5793 650.479 24.5793 650.706C24.5409 653.708 24.349 660.68 24.2147 664.992C24.2147 664.954 24.1763 664.954 24.1763 664.954C20.6265 661.915 17.6331 658.305 15.3114 654.278C-15.7352 600.763 -20.7625 549.471 -0.0583954 497.951C16.8848 455.834 66.0067 394.379 157.688 333.987C325.892 223.158 512.268 170.745 574.956 152.736C499.814 57.2752 381.5 -3.21161 249.043 0.131874C35.766 5.50805 -136.986 178.648 -139.96 389.838C-143.088 610.888 36.9749 791 259.482 791C481.989 791 659 613.947 659 395.499C659 384.861 658.559 374.299 657.714 363.869H657.734ZM331.188 116.907C354.751 116.907 373.882 135.847 373.882 159.176C373.882 182.504 354.751 201.444 331.188 201.444C307.625 201.444 288.494 182.504 288.494 159.176C288.494 135.847 307.625 116.907 331.188 116.907ZM156.825 73.1377C176.435 73.1377 192.38 88.8863 192.38 108.301C192.38 127.716 176.435 143.465 156.825 143.465C137.214 143.465 121.307 127.716 121.307 108.301C121.307 88.8863 137.214 73.1377 156.825 73.1377ZM49.4089 123.765C67.9063 110.752 93.7913 116.926 104.21 136.892C113.287 154.141 107.281 175.418 90.5101 185.544C5.27594 236.798 -55.9346 290.142 -92.5073 345.233C-76.2165 253.914 -23.7559 175.228 49.4089 123.765ZM-33.5611 484.786C-43.1168 508.513 -48.0674 532.43 -48.5087 556.481C-48.6238 564.897 -48.1825 573.369 -47.1847 581.823C-63.725 555.246 -76.7922 526.332 -85.849 495.728C-93.9273 462.388 -91.2409 427.282 -78.308 395.328C-74.7966 386.628 -71.5154 379.352 -69.5966 376.065C-17.1935 287.482 86.116 222.189 210.974 163.735C229.778 154.958 252.229 160.619 264.49 177.223C264.682 177.451 264.854 177.698 265.008 177.926C280.953 199.487 273.355 230.13 249.158 241.794C86.6724 320.062 2.49362 395.005 -33.5611 484.767V484.786ZM270.496 751.22C265.219 751.505 259.904 751.657 254.55 751.695C250.521 751.619 246.434 751.505 242.404 751.334C236.533 751.049 230.661 750.099 225.154 748.086C194.952 736.934 178.066 702.018 191.555 670.254C194.99 662.143 198.943 654.354 203.299 647.439C243.69 583.172 303.154 543.943 391.554 497.59C414.561 485.527 442.998 496.279 451.959 520.443L452.285 521.279C459.711 541.321 451.038 563.795 431.984 573.882C354.54 614.726 305.035 649.966 280.147 711.934C274.909 724.947 271.724 738.036 270.477 751.201L270.496 751.22ZM435.035 700.156C396.735 723.655 353.504 739.974 307.299 747.345C308.584 739.955 310.618 732.508 313.612 725.118C325.604 695.255 351.835 665.315 391.19 636.174C409.131 622.895 434.728 627.435 447.066 645.938C459.212 664.137 453.782 688.682 435.035 700.156ZM486.287 648.066C467.866 648.066 452.938 633.267 452.938 615.049C452.938 596.831 467.885 582.032 486.287 582.032C504.688 582.032 519.597 596.831 519.597 615.049C519.597 633.267 504.707 648.066 486.287 648.066ZM508.257 525.744C485.538 525.744 467.118 507.468 467.118 484.976C467.118 462.483 485.538 444.246 508.257 444.246C530.976 444.246 549.397 462.483 549.397 484.976C549.397 507.468 530.976 525.744 508.257 525.744Z" fill="white" fillOpacity={0.1} />
         </svg>
       </div>
 
-      <div className="relative z-10 mx-auto flex max-w-[1440px] items-center justify-between gap-8 px-20">
+      <div className="relative z-10 mx-auto flex max-w-[1400px] flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 px-4 sm:px-6 lg:px-20">
         {/* Left Content */}
-        <div className="max-w-[802px]">
+        <div className="w-full lg:max-w-3xl">
           {/* Title */}
-          <h2 className="mb-8 text-[42px] font-medium text-white">
-            Why Choose Taldo ?
+          <h2 className="mb-6 md:mb-8 text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-medium text-white text-center lg:text-left">
+            Why Choose Taldo?
           </h2>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-3 gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-7">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="flex min-h-[136px] items-start rounded-2xl bg-[#F1F1FF] p-4"
+                className="flex min-h-24 md:min-h-28 lg:min-h-[136px] items-start rounded-xl md:rounded-2xl bg-card-bg p-4"
               >
-                <p className="text-base font-medium leading-relaxed text-[#1a1a1a]">
+                <p className="text-sm md:text-base font-medium leading-relaxed text-gray-900">
                   {feature.title}
                 </p>
               </div>
@@ -55,12 +43,12 @@ export default function WhyChooseTaldo() {
         </div>
 
         {/* Right Image */}
-        <div className="relative h-[584px] w-[567px] shrink-0">
+        <div className="relative h-64 sm:h-80 md:h-96 lg:h-[584px] w-full lg:w-[567px] shrink-0 max-lg:hidden">
           <Image
             src="/nurses-to-germany/why-taldo.webp"
             alt="Nurse pointing"
             fill
-            className="rounded-3xl object-cover"
+            className="rounded-2xl lg:rounded-3xl object-cover"
           />
         </div>
       </div>
