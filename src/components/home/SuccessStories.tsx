@@ -5,37 +5,37 @@ import { useState, useRef } from "react";
 const stories = [
   {
     id: 1,
-    embedUrl: "https://www.youtube.com/embed/VIDEO_ID_1",
+    embedUrl: "https://www.youtube.com/embed/eQ23qmDEa_Q",
     title: "Success Story 1",
   },
   {
     id: 2,
-    embedUrl: "https://www.youtube.com/embed/VIDEO_ID_2",
+    embedUrl: "https://www.youtube.com/embed/eQ23qmDEa_Q",
     title: "Success Story 2",
   },
   {
     id: 3,
-    embedUrl: "https://www.youtube.com/embed/VIDEO_ID_3",
+    embedUrl: "https://www.youtube.com/embed/eQ23qmDEa_Q",
     title: "Success Story 3",
   },
   {
     id: 4,
-    embedUrl: "https://www.youtube.com/embed/VIDEO_ID_4",
+    embedUrl: "https://www.youtube.com/embed/eQ23qmDEa_Q",
     title: "Success Story 4",
   },
   {
     id: 5,
-    embedUrl: "https://www.youtube.com/embed/VIDEO_ID_5",
+    embedUrl: "https://www.youtube.com/embed/OEVo415sU2I",
     title: "Success Story 5",
   },
   {
     id: 6,
-    embedUrl: "https://www.youtube.com/embed/VIDEO_ID_6",
+    embedUrl: "https://www.youtube.com/embed/OEVo415sU2I",
     title: "Success Story 6",
   },
   {
     id: 7,
-    embedUrl: "https://www.youtube.com/embed/VIDEO_ID_7",
+    embedUrl: "https://www.youtube.com/embed/psmpO25abls",
     title: "Success Story 7",
   },
 ];

@@ -33,8 +33,8 @@ const footerColumns = [
         title: "GET IN TOUCH",
         links: [
           { name: "contact@taldo.co", href: "mailto:contact@taldo.co" },
-          { name: "+91 90000 00000", href: "tel:+919000000000" },
-          { name: "123 Taldo HQ, Bengaluru, India", href: "https://maps.google.com/?q=123 Taldo HQ, Bengaluru, India" },
+          { name: "+91 9818956623", href: "tel:+919818956623" },
+          { name: "1102, Tower A, Goregaon One Aspect, Goregaon West, Mumbai - 400104", href: "https://maps.google.com/?q=1102,_Tower_A,_Goregaon_One_Aspect,_Goregaon_West,_Mumbai_400104" },
         ],
       },
     ],

@@ -43,6 +43,9 @@ const faqs = [
 
 export default function FAQ() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
+  
+  const displayedFaqs = showAll ? faqs : faqs.slice(0, 5);
 
   return (
     <section className="w-full bg-white py-12 md:py-16 lg:py-20">
@@ -55,8 +58,9 @@ export default function FAQ() {
         {/* FAQ Content */}
         <div className="flex flex-col lg:flex-row gap-4 md:gap-6">
           {/* Questions List */}
-          <div className="flex w-full lg:w-1/2 flex-col bg-white rounded-xl border-2 border-gray-100">
-            {faqs.map((faq, index) => (
+          <div className="flex w-full lg:w-1/2 flex-col gap-0">
+            <div className="flex flex-col bg-white rounded-xl border-2 border-gray-100">
+              {displayedFaqs.map((faq, index) => (
               <button
                 key={index}
                 onClick={() => setSelectedIndex(selectedIndex === index ? null : index)}
@@ -99,6 +103,17 @@ export default function FAQ() {
                 </svg>
               </button>
             ))}
+            </div>
+            
+            {/* Show More/Less Button */}
+            {faqs.length > 5 && (
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="mt-4 px-4 py-2 text-sm md:text-base font-medium text-accent hover:text-accent/80 transition-colors text-center"
+              >
+                {showAll ? "Show Less" : `Show ${faqs.length - 5} More Questions`}
+              </button>
+            )}
           </div>
 
           {/* Answer Panel */}

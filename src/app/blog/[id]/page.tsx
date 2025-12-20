@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import blogs from '@/data/blogs.json';
 import OtherBlogs from '@/components/OtherBlogs';
+import ShareButtons from '@/components/blog/ShareButtons';
 
 interface BlogPost {
     id: string;
@@ -37,55 +38,7 @@ export default async function BlogPage({
         <main className="flex flex-col w-full bg-white min-h-screen">
             <div className="relative w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-20 pt-8 md:pt-12 pb-12 md:pb-16 lg:pb-20">
                 {/* Share Section - Desktop Only */}
-                <div className="hidden xl:flex absolute right-6 top-32 flex-col gap-4 items-center z-10">
-                    <p className="font-normal text-base leading-relaxed text-gray-900 mb-1">
-                        Share
-                    </p>
-                    <button
-                        className="w-10 h-10 md:w-11 md:h-11 hover:opacity-70 transition-opacity"
-                        aria-label="Share on Twitter"
-                    >
-                        <Image
-                            src="/blog/Twitter.svg"
-                            alt="Twitter"
-                            width={46}
-                            height={46}
-                        />
-                    </button>
-                    <button
-                        className="w-10 h-10 md:w-11 md:h-11 hover:opacity-70 transition-opacity"
-                        aria-label="Share on Facebook"
-                    >
-                        <Image
-                            src="/blog/Facebook.svg"
-                            alt="Facebook"
-                            width={46}
-                            height={46}
-                        />
-                    </button>
-                    <button
-                        className="w-10 h-10 md:w-11 md:h-11 hover:opacity-70 transition-opacity"
-                        aria-label="Share on LinkedIn"
-                    >
-                        <Image
-                            src="/blog/LinkedIn.svg"
-                            alt="LinkedIn"
-                            width={46}
-                            height={46}
-                        />
-                    </button>
-                    <button
-                        className="w-10 h-10 md:w-11 md:h-11 hover:opacity-70 transition-opacity"
-                        aria-label="Share via Email"
-                    >
-                        <Image
-                            src="/blog/Mail.svg"
-                            alt="Mail"
-                            width={46}
-                            height={46}
-                        />
-                    </button>
-                </div>
+                <ShareButtons title={blog.title} variant="desktop" />
 
                 {/* Main Content */}
                 <article className="max-w-4xl">
@@ -142,55 +95,7 @@ export default async function BlogPage({
                 </article>
 
                 {/* Mobile Share Section */}
-                <div className="xl:hidden flex flex-row gap-4 items-center justify-center mt-10 md:mt-12 lg:mt-16 pt-6 md:pt-8 border-t border-gray-300">
-                    <p className="font-normal text-sm md:text-base leading-relaxed text-gray-900">
-                        Share:
-                    </p>
-                    <button
-                        className="w-8 h-8 md:w-10 md:h-10 hover:opacity-70 transition-opacity"
-                        aria-label="Share on Twitter"
-                    >
-                        <Image
-                            src="/blog/Twitter.svg"
-                            alt="Twitter"
-                            width={40}
-                            height={40}
-                        />
-                    </button>
-                    <button
-                        className="w-8 h-8 md:w-10 md:h-10 hover:opacity-70 transition-opacity"
-                        aria-label="Share on Facebook"
-                    >
-                        <Image
-                            src="/blog/Facebook.svg"
-                            alt="Facebook"
-                            width={40}
-                            height={40}
-                        />
-                    </button>
-                    <button
-                        className="w-8 h-8 md:w-10 md:h-10 hover:opacity-70 transition-opacity"
-                        aria-label="Share on LinkedIn"
-                    >
-                        <Image
-                            src="/blog/LinkedIn.svg"
-                            alt="LinkedIn"
-                            width={40}
-                            height={40}
-                        />
-                    </button>
-                    <button
-                        className="w-8 h-8 md:w-10 md:h-10 hover:opacity-70 transition-opacity"
-                        aria-label="Share via Email"
-                    >
-                        <Image
-                            src="/blog/Mail.svg"
-                            alt="Mail"
-                            width={40}
-                            height={40}
-                        />
-                    </button>
-                </div>
+                <ShareButtons title={blog.title} variant="mobile" />
             </div>
 
             {/* Other Blogs Section */}
