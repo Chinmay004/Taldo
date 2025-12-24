@@ -22,7 +22,7 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-    const playersRef = useRef<(HTMLMuxPlayerElement | null)[]>([]);
+    const playersRef = useRef<any[]>([]);
 
     const handlePlay = (currentIndex: number) => {
         playersRef.current.forEach((player, index) => {
