@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import Link from "next/link";
 
 const stories = [
   {
@@ -151,6 +152,30 @@ export default function SuccessStories() {
         {/* Right spacer */}
         <div className="w-4 sm:w-6 lg:w-20 shrink-0" aria-hidden="true" />
       </div>
+
+      <div className="mt-8 md:mt-10 flex justify-end w-full pr-4 md:pr-8 lg:pr-28">
+
+      {/* CTA Button */}
+          <Link
+            href="#contact"
+            className="flex w-fit mx-auto lg:mx-0 items-center gap-3 rounded-full bg-accent px-5 md:px-6 py-3 md:py-4 text-sm md:text-base font-medium text-white transition-all hover:bg-primary-dark hover:shadow-lg"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+            Book your free consultation now
+          </Link>
+</div>
     </section>
   );
 }

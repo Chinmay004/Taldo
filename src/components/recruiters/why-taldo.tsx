@@ -1,28 +1,30 @@
+import Link from "next/link";
+
 export default function WhyTaldo() {
   const benefits = [
     {
       title: "High-Quality, Pre-Screened Candidates",
-      description: "Access to thoroughly vetted nursing professionals ready for German healthcare standards."
+      // description: "Access to thoroughly vetted nursing professionals ready for German healthcare standards."
     },
     {
       title: "Predictable, Quarterly Talent Pipelines",
-      description: "Consistent supply of qualified candidates delivered on schedule to meet your staffing needs."
+      // description: "Consistent supply of qualified candidates delivered on schedule to meet your staffing needs."
     },
     {
-      title: "Fully Compliant with German Hiring & Migration Norms",
-      description: "Complete adherence to all legal requirements and regulations for international recruitment."
+      title: "Fully compliant with German hiring and migration norms",
+      // description: "Complete adherence to all legal requirements and regulations for international recruitment."
     },
     {
-      title: "Reduction in Dropout Rates",
-      description: "Through comprehensive counselling and mentorship programs ensuring candidate commitment."
+      title: "Reduction in dropout rates through counselling & mentorship",
+      // description: "Through comprehensive counselling and mentorship programs ensuring candidate commitment."
     },
     {
       title: "End-to-End Administrative Support",
-      description: "From documentation to visa processing, we handle all paperwork and bureaucracy."
+      // description: "From documentation to visa processing, we handle all paperwork and bureaucracy."
     },
     {
       title: "Consistent Communication & Structured Reporting",
-      description: "Regular updates and transparent progress tracking throughout the recruitment process."
+      // description: "Regular updates and transparent progress tracking throughout the recruitment process."
     },
   ];
 
@@ -37,33 +39,58 @@ export default function WhyTaldo() {
           <p className="text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight text-gray-text max-w-3xl">
             Your trusted partner for reliable, compliant, and efficient international nurse recruitment
           </p>
+          
         </div>
 
         {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {benefits.map((benefit, index) => (
-            <div 
+            <div
               key={index}
               className="flex min-h-full flex-1 flex-col items-center md:items-start gap-3 overflow-clip rounded-xl md:rounded-2xl border border-solid border-accent/40 bg-card-bg px-4 py-4"
             >
               <div className="flex items-center gap-3 w-full flex-wrap justify-center md:justify-start">
                 <div className="relative h-5 w-5 shrink-0">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#0829E6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#0829E6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
                 <p className="font-['Albert_Sans',sans-serif] text-[20px] font-medium leading-[1.39] tracking-[-0.4px] text-[#0829e6]">
                   {benefit.title}
                 </p>
               </div>
-              <ul className="text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight text-gray-900 lg:pl-6 text-center lg:text-left">
+              {/* <ul className="text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight text-gray-900 lg:pl-6 text-center lg:text-left">
                 <li>
                   {benefit.description}
                 </li>
-              </ul>
+              </ul> */}
             </div>
           ))}
         </div>
+
+        {/* CTA Button */}
+        <div className="flex justify-center mt-8 md:mt-10">
+          <Link
+            href="#contact"
+            className="flex items-center gap-3 rounded-full bg-accent px-5 md:px-6 py-3 md:py-4 text-sm md:text-base font-medium text-white transition-all hover:bg-primary-dark hover:shadow-lg"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+            Talk to our Founders
+          </Link>
+        </div>
+
       </div>
     </section>
   );

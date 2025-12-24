@@ -97,7 +97,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-white">
+    <footer className="w-full bg-[#E8ECF7] rounded-2xl">
       {/* Main Footer Content */}
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20 pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8">
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8 lg:gap-12">
@@ -105,7 +105,7 @@ export default function Footer() {
           <div className="shrink-0 lg:w-1/5">
             <Link href="/">
               <Image
-                src="/logo.webp"
+                src="/Taldo_Horizontal Logo 1.svg"
                 alt="Taldo"
                 width={104}
                 height={38}
@@ -119,7 +119,7 @@ export default function Footer() {
             <div key={colIndex} className="flex flex-col gap-8 md:gap-12 lg:w-1/5 w-full items-center lg:items-start">
               {column.sections.map((section) => (
                 <div key={section.title} className="flex flex-col items-center lg:items-start w-full">
-                  <h4 className="mb-3 md:mb-4 text-xs md:text-sm font-semibold tracking-wide text-gray-900 text-center lg:text-left">
+                  <h4 className="mb-3 md:mb-4 text-base md:text-lg font-semibold tracking-wide text-gray-900 text-center lg:text-left">
                     {section.title}
                   </h4>
                   <ul className="flex flex-col gap-1.5 md:gap-2 items-center lg:items-start w-full">

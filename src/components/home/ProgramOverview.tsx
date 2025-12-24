@@ -30,7 +30,7 @@ const programFeatures = [
         </defs>
       </svg>
     ),
-    title: "Nursing Skill Alignment",
+    title: "Nursing skill alignment and clinical readiness",
   },
   {
     icon: (
@@ -45,7 +45,7 @@ const programFeatures = [
         </defs>
       </svg>
     ),
-    title: "Documentation & Visa Support",
+    title: "Documentation, Apostille, translation & visa support",
   },
   {
     icon: (
@@ -60,7 +60,7 @@ const programFeatures = [
         </defs>
       </svg>
     ),
-    title: "Guaranteed Employer Interviews",
+    title: "30+ hours of dedicated conversational German",
   },
   {
     icon: (
@@ -75,7 +75,7 @@ const programFeatures = [
         </defs>
       </svg>
     ),
-    title: "Cultural & Workplace Readiness",
+    title: "Small batch sizes (max 10 candidates)",
   },
   {
     icon: (
@@ -90,7 +90,7 @@ const programFeatures = [
         </defs>
       </svg>
     ),
-    title: "Post-Arrival Support",
+    title: "Post-arrival mentoring and Anerkennung support",
   },
 ];
 
@@ -105,8 +105,11 @@ export default function ProgramOverview() {
           fill
           className="object-cover"
         />
+        {/* <div className="absolute inset-0 bg-black/60"/> */}
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.20)_0%,#000_100.06%)]" />
+        {/* Dark Overlay */}
+        {/* <div className="absolute inset-0 bg-black/40" /> */}
       </div>
 
       {/* Content */}
@@ -114,10 +117,10 @@ export default function ProgramOverview() {
         {/* Header Section */}
         <div className="mb-8 md:mb-10 max-w-4xl mx-auto lg:mx-0 text-center lg:text-left">
           <h2 className="mb-3 md:mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight text-white">
-            Gateway to Germany – Program Overview
+            Taldo’s Gateway to Germany Program
           </h2>
           <p className="mb-4 md:mb-6 text-sm sm:text-base md:text-lg leading-relaxed text-white/90">
-            Taldo&apos;s Gateway to Germany is a structured end-to-end program designed to prepare Indian nurses for a strong start in the German healthcare system.
+            A structured, end-to-end program designed for Indian nurses who want to build successful careers in Germany.
           </p>
           <Link
             href="/program"
@@ -152,6 +155,15 @@ export default function ProgramOverview() {
             ))}
           </div>
         </div>
+
+        <div className="max-w-3xl mt-10 md:mt-10 mx-auto lg:mx-0 text-center lg:text-left">
+          
+          <p className="text-sm sm:text-base md:text-lg leading-relaxed text-white/90">
+            We support you until you settle into your new life in Germany.
+          </p>
+          
+        </div>
+
       </div>
     </section>
   );

@@ -17,8 +17,8 @@ const benefits = [
         </defs>
       </svg>
     ),
-    title: "Strong salaries",
-    description: "€2,300–€2,800 (pre-recognition) and €2,800–€3,500 (post-recognition)",
+    title: "Attractive Salary",
+    description: "Starting salary of INR 3 Lakhs / month",
   },
   {
     icon: (
@@ -35,8 +35,8 @@ const benefits = [
         </defs>
       </svg>
     ),
-    title: "Permanent Residence Pathway",
-    description: "PR possible in 3–5 years",
+    title: "Permanent Residency",
+    description: "PR typically in 3–5 years",
   },
   {
     icon: (
@@ -69,8 +69,8 @@ const benefits = [
         </defs>
       </svg>
     ),
-    title: "High Demand",
-    description: "Over 300,000 nurses needed by 2030",
+    title: "Social benefits",
+    description: "Free education, healthcare and subsidized benefits",
   },
   {
     icon: (
@@ -90,8 +90,8 @@ const benefits = [
         </defs>
       </svg>
     ),
-    title: "Family Benefits",
-    description: "Free education and subsidized services",
+    title: "Family Reunification",
+    description: "Invite your spouse and children",
   },
 ];
 
@@ -102,15 +102,13 @@ export default function WhyGermany() {
         {/* Section Header */}
         <div className="mb-8 md:mb-10 flex flex-col gap-3 md:gap-4 text-center md:text-left">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight text-gray-900">
-            Why Nurses Should Build Their Careers in{" "}
-            <span className="text-accent">Germany</span>?
+            Why <span className="text-accent">Germany</span> Is the Best Opportunity for Nurses
           </h2>
           <p className="max-w-full text-sm sm:text-base leading-relaxed text-gray-text">
-            Germany continues to face one of the largest healthcare staffing shortages in Europe, with a projected requirement of over 300,000 nurses by 2030. This makes it one of the strongest and most stable destinations for Indian nurses seeking a global career. Key benefits include:
+            Germany is facing a historic healthcare staffing shortage, with 300,000+ nurses needed by 2030.
           </p>
         </div>
 
-        {/* Benefits Grid - Responsive */}
         {/* Benefits Grid - Responsive */}
         <div className="flex flex-wrap gap-4 md:gap-6">
           {benefits.map((benefit) => (
@@ -127,7 +125,7 @@ export default function WhyGermany() {
                 <h3 className="text-xl md:text-2xl font-semibold text-gray-900 leading-tight">
                   {benefit.title}
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="text-base text-gray-700 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>

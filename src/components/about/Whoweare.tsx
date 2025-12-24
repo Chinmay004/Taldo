@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function WhoWeAre() {
     return (
         <section className="flex flex-col gap-8 md:gap-12 px-4 sm:px-6 lg:px-20 py-8 md:py-10 w-full max-w-[1400px] mx-auto bg-white">
@@ -13,16 +11,16 @@ export default function WhoWeAre() {
                 {/* Description */}
                 <div className="font-normal text-base sm:text-lg md:text-xl leading-relaxed tracking-tight text-gray-900 space-y-4">
                     <p>
-                        Taldo is a healthcare talent accelerator helping Indian nurses build long-term, successful careers in Germany. Through our flagship program, Gateway to Germany, we prepare nurses with the language skills, professional readiness, and cultural understanding needed to integrate confidently into the German healthcare system.
+                        Taldo is a healthcare talent accelerator helping Indian nurses build long-term, successful careers global. Through our flagship program, Gateway to Germany, we prepare nurses with the language skills, professional readiness, and cultural understanding needed to integrate confidently into the German healthcare system.
                     </p>
                     <p>
-                        We believe global mobility should be transparent, ethical, and supportive. With this foundation, Taldo bridges India's skilled nursing workforce with Germany's urgent need for qualified healthcare professionals.
+                        We believe global mobility should be transparent, ethical, and supportive. With this foundation, Taldo bridges India’s skilled nursing workforce with Germany’s urgent need for qualified healthcare professionals.
                     </p>
                 </div>
             </div>
 
             {/* Image */}
-            <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-[437px] rounded-xl md:rounded-2xl overflow-hidden">
+            {/* <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-[437px] rounded-xl md:rounded-2xl overflow-hidden">
                 <Image
                     src="/about/who-we-are.webp"
                     alt="German flag with historic building"
@@ -30,7 +28,7 @@ export default function WhoWeAre() {
                     className="object-cover"
                     priority
                 />
-            </div>
+            </div> */}
         </section>
     );
 }

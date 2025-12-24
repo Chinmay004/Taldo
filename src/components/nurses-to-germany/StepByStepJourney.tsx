@@ -51,6 +51,10 @@ export default function StepByStepJourney() {
                     </div>
                 ))}
             </div>
+
+            <div className="relative z-10 mt-8 md:mt-12 flex justify-center px-4 sm:px-6">
+                <p className="text-gray-900 sm:text-base lg:text-xl md:text-xl font-medium">A guided pathway from India to <span className="text-accent">Germany</span>.</p>
+            </div>
         </section>
     );
 }
