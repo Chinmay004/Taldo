@@ -12,16 +12,18 @@ export default function Hero() {
             {/* Heading */}
             <div className="flex flex-col gap-2">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
-                Build Your Nursing Career in Germany with Taldo
+                Build Your Nursing Career in Germany with Confidence
               </h1>
               <p className="text-base sm:text-lg leading-relaxed text-white/90">
-                Your trusted pathway to work, live, and grow in Germany&apos;s healthcare system.
+                India's most transparent and ethical pathway for nurses to work in Germany. Your journey starts with <b>Gateway to Germany by Taldo.</b>
               </p>
             </div>
 
+            <div className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-6">
+
             {/* CTA Button */}
             <Link
-              href="/apply"
+              href="#contact"
               className="flex w-fit items-center gap-3 rounded-full bg-white px-5 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium text-gray-900 transition-all hover:bg-white/90 hover:shadow-lg"
             >
               <svg
@@ -39,6 +41,28 @@ export default function Hero() {
               </svg>
               Apply now
             </Link>
+
+            {/* CTA Button 2*/}
+            <Link
+              href="#contact"
+              className="flex w-fit items-center gap-3 rounded-full bg-white px-5 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium text-gray-900 transition-all hover:bg-white/90 hover:shadow-lg"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+              Speak to a Program Advisor
+            </Link>
+            </div>
           </div>
 
           {/* Right Image */}

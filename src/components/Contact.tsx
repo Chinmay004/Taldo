@@ -61,10 +61,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="w-full bg-white py-12 md:py-16 lg:py-20">
+    <section id="contact" className="w-full bg-[#2B3656] py-12 md:py-16 lg:py-20 rounded-4xl">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20">
         {/* Title */}
-        <h2 className="mb-8 md:mb-10 text-2xl sm:text-3xl md:text-[32px] font-bold text-gray-900 text-center md:text-left">
+        <h2 className="mb-8 md:mb-10 text-2xl sm:text-3xl md:text-[32px] font-bold text-white text-center md:text-left">
           Job Seeker Enquiry
         </h2>
 
@@ -74,7 +74,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {/* Job Seeker Name */}
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-medium text-gray-900">
+              <label className="text-sm font-medium text-white">
                 Job Seeker Name <span className="text-red-500">*</span>
               </label>
               <input
@@ -90,7 +90,7 @@ export default function Contact() {
 
             {/* Phone Number */}
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-medium text-gray-900">
+              <label className="text-sm font-medium text-white">
                 Phone Number <span className="text-red-500">*</span>
               </label>
               <input
@@ -111,7 +111,7 @@ export default function Contact() {
 
             {/* Email ID */}
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-medium text-gray-900">
+              <label className="text-sm font-medium text-white">
                 Email ID <span className="text-red-500">*</span>
               </label>
               <input
@@ -130,7 +130,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             {/* State */}
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-medium text-gray-900">
+              <label className="text-sm font-medium text-white">
                 State <span className="text-red-500">*</span>
               </label>
               <select
@@ -157,7 +157,7 @@ export default function Contact() {
 
             {/* Education */}
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-medium text-gray-900">
+              <label className="text-sm font-medium text-white">
                 Education <span className="text-red-500">*</span>
               </label>
               <select

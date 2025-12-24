@@ -3,7 +3,6 @@ import { Albert_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 
 const albertSans = Albert_Sans({
@@ -22,6 +21,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
       <body
@@ -29,7 +29,6 @@ export default function RootLayout({
       >
         <Header />
         {children}
-        <FAQ />
         <Contact />
         <Footer />
       </body>

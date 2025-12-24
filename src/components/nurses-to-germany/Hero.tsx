@@ -19,8 +19,8 @@ const allBenefits = [
         </defs>
       </svg>
     ),
-    title: "Strong salaries",
-    description: "€2,300–€2,800 (pre-recognition) and €2,800–€3,500 (post-recognition)",
+    title: "Attractive Salary ",
+    description: "Starting salary of INR 3 Lakhs / month",
   },
   {
     icon: (
@@ -37,8 +37,8 @@ const allBenefits = [
         </defs>
       </svg>
     ),
-    title: "Permanent Residence Pathway",
-    description: "PR possible in 3–5 years",
+    title: "Permanent Residency",
+    description: "PR typically in 3–5 years",
   },
   {
     icon: (
@@ -71,8 +71,8 @@ const allBenefits = [
         </defs>
       </svg>
     ),
-    title: "High Demand",
-    description: "Over 300,000 nurses needed by 2030",
+    title: "Social benefits ",
+    description: "Free education, healthcare and subsidized benefits",
   },
   {
     icon: (
@@ -92,8 +92,8 @@ const allBenefits = [
         </defs>
       </svg>
     ),
-    title: "Family Benefits",
-    description: "Free education and subsidized services",
+    title: "Family Reunification",
+    description: "Invite your spouse and children",
   },
 ];
 
@@ -109,8 +109,9 @@ export default function NursesToGermanyHero() {
           className="object-cover object-top"
           priority
         />
+        <div className="absolute inset-0 bg-black/60" />
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.20)_0%,#000_87.06%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.20)_0%,#000_150.06%)]" />
       </div>
 
       {/* Content */}
@@ -118,7 +119,7 @@ export default function NursesToGermanyHero() {
         {/* Header */}
         <div className="mb-6 text-center md:text-left">
           <h1 className="mb-3 md:mb-4 text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-            Nurses to Germany
+            Why Nurses Should Build Their Careers in Germany
           </h1>
           <p className="max-w-5xl mx-auto md:mx-0 text-sm sm:text-base leading-relaxed text-white/90">
             Germany continues to face one of the largest healthcare staffing shortages in Europe, with a projected requirement of over 300,000 nurses by 2030. This makes it one of the strongest and most stable destinations for Indian nurses seeking a global career. Key benefits include:
@@ -148,6 +149,13 @@ export default function NursesToGermanyHero() {
             </div>
           ))}
         </div>
+
+        <div className="py-8 flex justify-center md:justify-start">
+          <p className="max-w-5xl text-center md:text-left text-sm sm:text-base leading-relaxed text-white/90">
+            Germany offers a stable, dignified, well-structured future for nurses ready to build their careers internationally.
+          </p>
+        </div>
+
       </div>
     </section>
   );

@@ -7,13 +7,12 @@ export default function ProgramIncludes() {
             <div className="flex w-full flex-col items-center gap-2 md:gap-3">
                 <h1 className="w-full text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-medium leading-tight tracking-tight text-gray-900">
                     <span>Gateway to </span>
-                    <span className="text-accent">German Program</span>
-                    <span> for Nurses</span>
+                    <span className="text-accent">Germany</span>
+                    <span> – Program Overview</span>
                 </h1>
                 <div className="w-full max-w-4xl mx-auto text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight text-gray-900">
                     <p>
-                        Taldo's Gateway to Germany is a structured end-to-end program designed to prepare Indian
-                        nurses for a strong start in the German healthcare system.
+                        Taldo’s Gateway to Germany is a structured end-to-end program designed to prepare Indian nurses for a strong start in the German healthcare system.
                     </p>
                 </div>
             </div>
@@ -47,10 +46,10 @@ export default function ProgramIncludes() {
                             </p>
                         </div>
                         <ul className="text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight text-gray-900 lg:pl-6 lg:list-disc text-center lg:text-left">
-                            <li>
-                                Learn German with certified trainers in small batches of 10, featuring 30+ hours of
-                                conversational practice and focused exam-oriented coaching for faster, confident progress.
-                            </li>
+                            <li>Certified trainers</li>
+                            <li>Smaller batch sizes of 10 candidates for better progress</li>
+                            <li>30+ hours of dedicated conversational German training</li>
+                            <li>Exam-oriented coaching</li>
                         </ul>
                     </div>
 

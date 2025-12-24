@@ -10,6 +10,7 @@ const navItems = [
   { name: "About Us", href: "/about" },
   { name: "Recruiters", href: "/recruiters" },
   { name: "Nurses to Germany", href: "/nurses-to-germany" },
+  { name: "Webinar", href: "/webinar" },
   { name: "Blog", href: "/blog" },
 ];
 
@@ -31,7 +32,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
-            src="/logo.webp"
+            src="/Taldo_Horizontal Logo 1.svg"
             alt="Taldo"
             width={104}
             height={38}

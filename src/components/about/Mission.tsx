@@ -23,7 +23,7 @@ export default function Mission() {
 
                     {/* Description */}
                     <p className="font-normal text-base sm:text-lg md:text-xl leading-relaxed tracking-tight text-gray-900">
-                        To become India's most trusted pathway for nurses aspiring to work in Germany, and the preferred partner for healthcare employers seeking skilled, pre-trained, and culturally prepared talent.
+                        To become India’s most trusted pathway for nurses aspiring to work in Germany, and the preferred partner for healthcare employers seeking skilled, pre-trained, and culturally prepared talent.
                     </p>
                 </div>
             </section>

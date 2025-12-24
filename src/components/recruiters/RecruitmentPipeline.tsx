@@ -27,9 +27,9 @@ const ProcessCard = ({
   className?: string;
 }) => {
   return (
-    <div className={`flex-1 rounded-2xl border border-[#e9e9e9] bg-[#f3f4ff] px-3 pb-4 pt-3 ${className}`}>
-      <div className="flex flex-col items-center gap-5">
-        <div className="flex h-20 w-20 items-center justify-center rounded-xl border border-[#aeaff1] bg-[#5e72e4] md:h-[5.625rem] md:w-[5.625rem]">
+    <div className={`flex-1 rounded-2xl border border-[#e9e9e9] bg-[#f3f4ff] p-8 ${className}`}>
+      <div className="flex flex-col items-center gap-6">
+        <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-[#aeaff1] bg-[#5e72e4] md:h-16 md:w-16">
           {icon}
         </div>
         <div className="flex flex-col gap-1 text-center">
@@ -48,8 +48,8 @@ const ProcessCard = ({
 export default function RecruitmentPipeline() {
   const steps = [
     {
-      title: "Sourcing & Screening",
-      description: "Identifying qualified GNMs and BSc nurses and conducting multi-stage assessments.",
+      title: "Requirement Mapping",
+      description: "Understanding department-wise needs and timelines.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
           <g clipPath="url(#clip0_1_807)">
@@ -67,8 +67,8 @@ export default function RecruitmentPipeline() {
       ),
     },
     {
-      title: "German Language Training (A1–B2)",
-      description: "Small batches, conversation-heavy modules, exam preparation.",
+      title: "Sourcing & Screening",
+      description: "Identifying qualified GNMs and BSc nurses and conducting multi-stage assessments.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
           <g clipPath="url(#clip0_1_819)">
@@ -85,8 +85,8 @@ export default function RecruitmentPipeline() {
       ),
     },
     {
-      title: "Interviews",
-      description: "Structured virtual or in-person sessions.",
+      title: "German Language Training (A1–B2)",
+      description: "Small batches, conversation-heavy modules, exam preparation.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
           <g clipPath="url(#clip0_1_830)">
@@ -163,13 +163,16 @@ export default function RecruitmentPipeline() {
     <section className="relative w-full bg-white py-12 md:py-16 lg:py-20">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20">
         {/* Heading Section */}
-        <div className="mb-8 md:mb-12 flex flex-col gap-2 md:gap-3">
+        <div className="mb-8 md:mb-12 flex flex-col gap-2 md:gap-2">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-medium leading-tight tracking-tight text-gray-900">
             Hire Skilled, <span className="text-accent">German-Ready Nurses</span> from India
           </h2>
           <p className="text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight text-gray-900">
             Taldo partners with hospitals, Pflegeheims, and healthcare networks in Germany to deliver a qualified, language-certified pipeline of nursing talent ready for integration.
           </p>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-medium leading-tight tracking-tight text-gray-900 mt-10">
+            Our Recruitment <span className="text-accent">Workflow</span>
+          </h2>
         </div>
 
         {/* Desktop: fixed grid with simple arrows (serpentine flow) */}
