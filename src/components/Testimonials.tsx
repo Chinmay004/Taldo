@@ -37,7 +37,7 @@ export default function Testimonials() {
             <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20">
 
                 <h2 className="mb-8 md:mb-10 text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight text-gray-900 text-center md:text-left">
-                    Testimonials
+                    Success Stories
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 place-items-center">
