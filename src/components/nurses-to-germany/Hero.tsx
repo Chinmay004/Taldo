@@ -19,7 +19,7 @@ const allBenefits = [
         </defs>
       </svg>
     ),
-    title: "Attractive Salary ",
+    title: "Attractive salary",
     description: "Starting salary of INR 3 Lakhs / month",
   },
   {
@@ -38,7 +38,7 @@ const allBenefits = [
       </svg>
     ),
     title: "Permanent Residency",
-    description: "PR typically in 3–5 years",
+    description: "typically in 3–5 years",
   },
   {
     icon: (
@@ -54,25 +54,24 @@ const allBenefits = [
       </svg>
     ),
     title: "Work-life balance",
-    description: "Regulated 38–40 hour workweeks",
+    description: "Regulated 38-40 hour workweeks",
   },
   {
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-        <g clipPath="url(#clip0_ntg_4)">
-          <path d="M35 32.5H5V7.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M31.25 11.25L20 22.5L15 17.5L5 27.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M31.25 17.5V11.25H25" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <g clipPath="url(#clip0_ntg_6)">
+          <path d="M20 35C28.2843 35 35 28.2843 35 20C35 11.7157 28.2843 5 20 5C11.7157 5 5 11.7157 5 20C5 28.2843 11.7157 35 20 35Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M20 10V20L26.25 23.75" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </g>
         <defs>
-          <clipPath id="clip0_ntg_4">
+          <clipPath id="clip0_ntg_6">
             <rect width="40" height="40" fill="white" />
           </clipPath>
         </defs>
       </svg>
     ),
-    title: "Social benefits ",
-    description: "Free education, healthcare and subsidized benefits",
+    title: "Paid Overtime",
+    description: "Get paid INR 1500+ / hour for overtime",
   },
   {
     icon: (
@@ -92,8 +91,26 @@ const allBenefits = [
         </defs>
       </svg>
     ),
-    title: "Family Reunification",
+    title: "Family reunification",
     description: "Invite your spouse and children",
+  },
+  {
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <g clipPath="url(#clip0_ntg_4)">
+          <path d="M35 32.5H5V7.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M31.25 11.25L20 22.5L15 17.5L5 27.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M31.25 17.5V11.25H25" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
+        <defs>
+          <clipPath id="clip0_ntg_4">
+            <rect width="40" height="40" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    ),
+    title: "Social benefits",
+    description: "Free education, healthcare and subsidized benefits",
   },
 ];
 
