@@ -2,22 +2,19 @@
 
 import { useState, useRef, useEffect } from "react";
 
-// YouTube Shorts video IDs
-// To extract all Shorts from the channel:
-// 1. Go to https://www.youtube.com/channel/UC30kGBAio5wWREcoyJ8bYtQ/shorts
-// 2. Scroll down to load all videos
-// 3. Open browser console (F12) and run the script from extract_shorts.js
-// 4. Copy the video IDs and add them here
+interface Webinar {
+  id: string;
+  videoId: string;
+  title?: string | null;
+  description?: string | null;
+  order: number;
+}
 
-const shortsVideos = [
-  "eQ23qmDEa_Q",
-  "Gkykh0qXkxc", 
-  "PDrFXZtNJMs",
-  "Vd_F6DkD-QU",
-  // Add more video IDs here as you extract them
-];
+interface YouTubeShortsProps {
+  webinars: Webinar[];
+}
 
-export default function YouTubeShorts() {
+export default function YouTubeShorts({ webinars }: YouTubeShortsProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -34,7 +31,7 @@ export default function YouTubeShorts() {
     checkScrollability();
     window.addEventListener('resize', checkScrollability);
     return () => window.removeEventListener('resize', checkScrollability);
-  }, []);
+  }, [webinars]);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -61,17 +58,16 @@ export default function YouTubeShorts() {
         </div>
 
         {/* Navigation Arrows */}
-        {shortsVideos.length > 3 && (
+        {webinars.length > 3 && (
           <div className="flex items-center gap-2 md:gap-3">
             {/* Left Arrow */}
             <button
               onClick={() => scroll("left")}
               disabled={!canScrollLeft}
-              className={`flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full border-2 transition-all ${
-                canScrollLeft
+              className={`flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full border-2 transition-all ${canScrollLeft
                   ? "border-accent text-accent hover:bg-accent hover:text-white"
                   : "border-gray-300 text-gray-300 cursor-not-allowed"
-              }`}
+                }`}
               aria-label="Scroll left"
             >
               <svg
@@ -92,11 +88,10 @@ export default function YouTubeShorts() {
             <button
               onClick={() => scroll("right")}
               disabled={!canScrollRight}
-              className={`flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full transition-all ${
-                canScrollRight
+              className={`flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full transition-all ${canScrollRight
                   ? "bg-accent text-white hover:bg-primary-dark"
                   : "bg-gray-300 text-white cursor-not-allowed"
-              }`}
+                }`}
               aria-label="Scroll right"
             >
               <svg
@@ -125,9 +120,9 @@ export default function YouTubeShorts() {
           paddingLeft: 'max(1rem, calc((100vw - 1400px) / 2 + 5rem))'
         }}
       >
-        {shortsVideos.map((videoId, index) => (
+        {webinars.map((webinar, index) => (
           <div
-            key={videoId}
+            key={webinar.id}
             className="relative shrink-0 overflow-hidden rounded-xl md:rounded-2xl bg-card-bg shadow-lg hover:shadow-xl transition-shadow duration-300 group"
             style={{
               width: '280px',
@@ -136,14 +131,14 @@ export default function YouTubeShorts() {
           >
             {/* YouTube Shorts Embed */}
             <iframe
-              src={`https://www.youtube.com/embed/${videoId}?modestbranding=1&rel=0&playsinline=1&controls=1`}
-              title={`YouTube Short ${index + 1}`}
+              src={`https://www.youtube.com/embed/${webinar.videoId}?modestbranding=1&rel=0&playsinline=1&controls=1`}
+              title={webinar.title || `YouTube Short ${index + 1}`}
               className="h-full w-full border-0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               loading="lazy"
             />
-            
+
             {/* Overlay gradient for better visual appeal */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
           </div>
@@ -152,7 +147,7 @@ export default function YouTubeShorts() {
         <div className="w-4 sm:w-6 lg:w-20 shrink-0" aria-hidden="true" />
       </div>
 
-      {shortsVideos.length === 0 && (
+      {webinars.length === 0 && (
         <div className="text-center py-12 text-gray-500">
           <p>No Shorts videos available at the moment.</p>
         </div>
