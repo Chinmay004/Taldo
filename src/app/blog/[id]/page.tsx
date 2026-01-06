@@ -1,24 +1,53 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import blogs from '@/data/blogs.json';
 import OtherBlogs from '@/components/OtherBlogs';
 import ShareButtons from '@/components/blog/ShareButtons';
 
 interface BlogPost {
     id: string;
+    slug: string;
     title: string;
     date: string;
     image: string;
-    content: {
-        intro: string;
-        paragraphs: string[];
-        bulletPoints: string[];
-    };
+    intro: string;
+    content: Array<{
+        type: 'paragraph' | 'list';
+        content?: string; // for paragraphs
+        items?: string[]; // for lists
+    }>;
+}
+
+async function getAllBlogs() {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    const res = await fetch(`${baseUrl}/api/blogs`, {
+        next: { revalidate: 60 },
+    });
+
+    if (!res.ok) {
+        return [];
+    }
+
+    return res.json();
+}
+
+async function getBlog(slug: string) {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    const res = await fetch(`${baseUrl}/api/blogs/${slug}`, {
+        next: { revalidate: 60 },
+    });
+
+    if (!res.ok) {
+        return null;
+    }
+
+    return res.json();
 }
 
 export async function generateStaticParams() {
-    return blogs.map((blog) => ({
-        id: blog.id,
+    const blogs = await getAllBlogs();
+    if (!Array.isArray(blogs)) return [];
+    return blogs.map((blog: any) => ({
+        id: blog.slug,
     }));
 }
 
@@ -28,7 +57,8 @@ export default async function BlogPage({
     params: Promise<{ id: string }>;
 }) {
     const { id } = await params;
-    const blog = blogs.find((b) => b.id === id) as BlogPost | undefined;
+    const blog = await getBlog(id);
+    const allBlogs = await getAllBlogs();
 
     if (!blog) {
         notFound();
@@ -41,7 +71,7 @@ export default async function BlogPage({
                 <ShareButtons title={blog.title} variant="desktop" />
 
                 {/* Main Content */}
-                <article className="max-w-4xl">
+                <article className="max-w-4xl mx-auto">
                     {/* Title */}
                     <h1 className="font-medium text-2xl sm:text-3xl md:text-4xl lg:text-[42px] leading-tight text-gray-900 mb-3 md:mb-4 lg:mb-6">
                         {blog.title}
@@ -67,30 +97,55 @@ export default async function BlogPage({
                     <div className="flex flex-col">
                         {/* Intro */}
                         <p className="font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed text-gray-900 mb-6 md:mb-8 lg:mb-10">
-                            {blog.content.intro}
+                            {blog.intro}
                         </p>
 
-                        {/* Paragraphs */}
-                        {blog.content.paragraphs.map((paragraph, index) => (
-                            <p
-                                key={index}
-                                className="font-normal text-base md:text-lg lg:text-xl leading-relaxed text-gray-900 mb-6 md:mb-8 lg:mb-10"
-                            >
-                                {paragraph}
-                            </p>
-                        ))}
-
-                        {/* Bullet Points */}
-                        <div className="flex flex-col gap-4 md:gap-5 lg:gap-6 mt-2">
-                            {blog.content.bulletPoints.map((point, index) => (
-                                <div key={index} className="flex items-start gap-3 md:gap-4">
-                                    <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-gray-900 mt-2.5 md:mt-3 shrink-0" />
-                                    <p className="font-normal text-base md:text-lg lg:text-xl leading-relaxed text-gray-900">
-                                        {point}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
+                        {/* Dynamic Content Blocks */}
+                        {blog.content && Array.isArray(blog.content) ? (
+                            blog.content.map((block: any, index: number) => {
+                                if (block.type === 'paragraph') {
+                                    return (
+                                        <p
+                                            key={index}
+                                            className="font-normal text-base md:text-lg lg:text-xl leading-relaxed text-gray-900 mb-6 md:mb-8 lg:mb-10"
+                                        >
+                                            {block.content}
+                                        </p>
+                                    );
+                                } else if (block.type === 'list') {
+                                    return (
+                                        <div key={index} className="flex flex-col gap-4 md:gap-5 lg:gap-6 mb-8 md:mb-10 mt-2">
+                                            {block.items?.map((point: string, i: number) => (
+                                                <div key={i} className="flex items-start gap-3 md:gap-4">
+                                                    <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-gray-900 mt-2.5 md:mt-3 shrink-0" />
+                                                    <p className="font-normal text-base md:text-lg lg:text-xl leading-relaxed text-gray-900">
+                                                        {point}
+                                                    </p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    );
+                                }
+                                return null;
+                            })
+                        ) : (
+                            // Fallback for old content format (if any exists in cache/db temporarily)
+                            <>
+                                {blog.paragraphs?.map((p: string, i: number) => (
+                                    <p key={`p-${i}`} className="font-normal text-base md:text-lg lg:text-xl leading-relaxed text-gray-900 mb-6 md:mb-8 lg:mb-10">{p}</p>
+                                ))}
+                                {blog.bulletPoints?.length > 0 && (
+                                    <div className="flex flex-col gap-4 md:gap-5 lg:gap-6 mt-2">
+                                        {blog.bulletPoints.map((point: string, i: number) => (
+                                            <div key={`b-${i}`} className="flex items-start gap-3 md:gap-4">
+                                                <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-gray-900 mt-2.5 md:mt-3 shrink-0" />
+                                                <p className="font-normal text-base md:text-lg lg:text-xl leading-relaxed text-gray-900">{point}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </>
+                        )}
                     </div>
                 </article>
 
@@ -99,7 +154,7 @@ export default async function BlogPage({
             </div>
 
             {/* Other Blogs Section */}
-            <OtherBlogs blogs={blogs} currentBlogId={id} heading='Other Blogs' limit={6} />
+            <OtherBlogs blogs={Array.isArray(allBlogs) ? allBlogs : []} currentBlogId={blog.id} heading='Other Blogs' limit={6} />
         </main>
     );
 }

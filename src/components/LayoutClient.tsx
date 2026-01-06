@@ -12,14 +12,15 @@ export default function LayoutClient({
 }) {
   const pathname = usePathname();
 
-  const hideContact = pathname.startsWith("/recruiters");
+  const isRecruiterPage = pathname.startsWith("/recruiters");
+  const isAdminPage = pathname.startsWith("/admin");
 
   return (
     <>
-      <Header />
+      {!isAdminPage && <Header />}
       {children}
-      {!hideContact && <Contact />}
-      <Footer />
+      {!isRecruiterPage && !isAdminPage && <Contact />}
+      {!isAdminPage && <Footer />}
     </>
   );
 }
