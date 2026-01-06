@@ -11,6 +11,7 @@ const footerColumns = [
           { name: "About Us", href: "/about" },
           { name: "Recruiters", href: "/recruiters" },
           { name: "Nurses to Germany", href: "/nurses-to-germany" },
+          { name: "Webinar", href: "/webinar" },
           { name: "Blog", href: "/blog" },
         ],
       },

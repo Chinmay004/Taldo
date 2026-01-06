@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function WhyTaldo() {
   const benefits = [
     {
-      title: "High-Quality, Pre-Screened Candidates",
+      title: "High-Quality, Verified Candidates",
       // description: "Access to thoroughly vetted nursing professionals ready for German healthcare standards."
     },
     {
@@ -11,11 +11,11 @@ export default function WhyTaldo() {
       // description: "Consistent supply of qualified candidates delivered on schedule to meet your staffing needs."
     },
     {
-      title: "Fully compliant with German hiring and migration norms",
+      title: "Fully-compliant with German regulations",
       // description: "Complete adherence to all legal requirements and regulations for international recruitment."
     },
     {
-      title: "Reduction in dropout rates through counselling & mentorship",
+      title: "Reduction in drop-outs through Counselling",
       // description: "Through comprehensive counselling and mentorship programs ensuring candidate commitment."
     },
     {
@@ -47,9 +47,9 @@ export default function WhyTaldo() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="flex min-h-full flex-1 flex-col items-center md:items-start gap-3 overflow-clip rounded-xl md:rounded-2xl border border-solid border-accent/40 bg-card-bg px-4 py-4"
+              className="flex min-h-full flex-1 flex-col items-start gap-3 overflow-clip rounded-xl md:rounded-2xl border border-solid border-accent/40 bg-card-bg px-4 py-4"
             >
-              <div className="flex items-center gap-3 w-full flex-wrap justify-center md:justify-start">
+              <div className="flex items-center gap-3 w-full justify-center md:justify-start">
                 <div className="relative h-5 w-5 shrink-0">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#0829E6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

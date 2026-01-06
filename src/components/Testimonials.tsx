@@ -5,11 +5,6 @@ import MuxPlayer from "@mux/mux-player-react";
 
 const testimonials = [
     {
-        playbackId: "dim7WsUsD97AblnXEz2MimB6Eg02HqG9o9Ru3hKyaqUk",
-        name: "Shrushti Pandey",
-        description: "BSC Nursing, Ahmedabad",
-    },
-    {
         playbackId: "Q2KUoAc5atc2WYtbICKJjMAsp5f4jeU6INEPEX01Q01Wo",
         name: "Lamminchong Vaiphei (Teresa)",
         description: "GNM Nursing, Manipur",
@@ -18,6 +13,11 @@ const testimonials = [
         playbackId: "cHnp002L7AKgq0200j2tsWjgBKlrp194X6c02L02QvLwXYjY",
         name: "Lalnundiki",
         description: "GNM Nursing, Manipur",
+    },
+    {
+        playbackId: "dim7WsUsD97AblnXEz2MimB6Eg02HqG9o9Ru3hKyaqUk",
+        name: "Shrushti Pandey",
+        description: "BSC Nursing, Ahmedabad",
     },
 ];
 

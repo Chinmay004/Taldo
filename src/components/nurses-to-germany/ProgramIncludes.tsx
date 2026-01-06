@@ -46,10 +46,8 @@ export default function ProgramIncludes() {
                             </p>
                         </div>
                         <ul className="text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight text-gray-900 lg:pl-6 lg:list-disc text-center lg:text-left">
-                            <li>Certified trainers</li>
+                            <li>Live classes by experienced and Certified trainers</li>
                             <li>Smaller batch sizes of 10 candidates for better progress</li>
-                            <li>30+ hours of dedicated conversational German training</li>
-                            <li>Exam-oriented coaching</li>
                         </ul>
                     </div>
 
@@ -74,7 +72,10 @@ export default function ProgramIncludes() {
                         </div>
                         <ul className="text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight text-gray-900 lg:pl-6 lg:list-disc text-center lg:text-left">
                             <li>
-                                Training modules aligned with German clinical expectations.
+                                Training modules aligned with German clinical expectations
+                            </li>
+                            <li>
+                                30+ hours of dedicated conversational German training
                             </li>
                         </ul>
                     </div>
@@ -100,7 +101,10 @@ export default function ProgramIncludes() {
                         </div>
                         <ul className="text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight text-gray-900 lg:pl-6 lg:list-disc text-center lg:text-left">
                             <li>
-                                Complete assistance with Apostille, translations, interview prep, and embassy filings.
+                                End-to-end visa and recognition process handling
+                            </li>
+                            <li>
+                                Clear timelines, documentation checklists, and compliance support
                             </li>
                         </ul>
                     </div>
@@ -126,7 +130,10 @@ export default function ProgramIncludes() {
                         </div>
                         <ul className="text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight text-gray-900 lg:pl-6 lg:list-disc text-center lg:text-left">
                             <li>
-                                Partnered hospitals and elderly care homes across Germany.
+                                Guaranteed interviews with verified German healthcare employers
+                            </li>
+                            <li>
+                                Role-specific interview preparation aligned to hospital expectations
                             </li>
                         </ul>
                     </div>
@@ -152,7 +159,10 @@ export default function ProgramIncludes() {
                         </div>
                         <ul className="text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight text-gray-900 lg:pl-6 lg:list-disc text-center lg:text-left">
                             <li>
-                                Modules on German work culture, expectations, communication, and daily integration.
+                                German workplace culture, communication, and professional norms
+                            </li>
+                            <li>
+                                Hospital workflows, ethics, and on-the-job expectations
                             </li>
                         </ul>
                     </div>
@@ -178,7 +188,10 @@ export default function ProgramIncludes() {
                         </div>
                         <ul className="text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight text-gray-900 lg:pl-6 lg:list-disc text-center lg:text-left">
                             <li>
-                                Assistance with accommodation, onboarding, and the Anerkennung process.
+                                Support with housing, registration, banking, and essentials
+                            </li>
+                            <li>
+                                Continued assistance after joining and settling in Germany
                             </li>
                         </ul>
                     </div>
