@@ -61,8 +61,9 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="w-full bg-[#2B3656] py-12 md:py-16 lg:py-20 rounded-4xl">
+    <section id="contact" className="w-full bg-white">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20">
+        <div className="relative lg:flex-row items-center justify-between overflow-hidden rounded-2xl lg:rounded-3xl bg-[#2B3656] px-6 sm:px-8 lg:px-12 py-12 mb-7">
         {/* Title */}
         <h2 className="mb-8 md:mb-10 text-2xl sm:text-3xl md:text-[32px] font-bold text-white text-center md:text-left">
           Job Seeker Enquiry
@@ -184,13 +185,17 @@ export default function Contact() {
           </div>
 
           {/* Submit Button */}
-          <button
-            type="submit"
-            className="mt-2 md:mt-4 w-full sm:w-fit rounded-full bg-primary px-8 md:px-10 py-3 md:py-3.5 text-base font-medium text-white transition-all hover:bg-accent"
-          >
-            Submit Enquiry
-          </button>
+          <div className="flex justify-center mt-2 md:mt-4">
+  <button
+    type="submit"
+    className="w-full sm:w-fit rounded-full bg-white px-8 md:px-10 py-3 md:py-3.5 text-base font-medium text-primary transition-all hover:bg-gray-100"
+  >
+    Submit
+  </button>
+</div>
+
         </form>
+        </div>
       </div>
     </section>
   );

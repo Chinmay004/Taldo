@@ -117,7 +117,7 @@ export default function ProgramOverview() {
         {/* Header Section */}
         <div className="mb-8 md:mb-10 max-w-4xl mx-auto lg:mx-0 text-center lg:text-left">
           <h2 className="mb-3 md:mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight text-white">
-            Taldo’s Gateway to Germany Program
+            Taldo’s <span className="text-blue-900">Gateway to Germany Program</span>
           </h2>
           <p className="mb-4 md:mb-6 text-sm sm:text-base md:text-lg leading-relaxed text-white/90">
             A structured, end-to-end program designed for Indian nurses who want to build successful careers in Germany.

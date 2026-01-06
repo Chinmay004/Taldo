@@ -61,15 +61,16 @@ export default function Team() {
                                     <p className="font-normal text-base md:text-lg lg:text-lg leading-relaxed tracking-tight text-gray-900">
                                         {member.description}
                                     </p>
-                                    <Icon
-                                        key={member.name}
-                                        className="w-6 h-6 mt-2 cursor-pointer text-black/80 hover:text-black transition"
-                                        onClick={() => window.open(member.link, "_blank")}
-                                    />
+                                    <div className="flex justify-center sm:justify-start mt-2">
+                                        <Icon
+                                            className="w-6 h-6 cursor-pointer text-black/80 hover:text-black transition"
+                                            onClick={() => window.open(member.link, "_blank")}
+                                        />
+                                    </div>
 
                                 </div>
                             </div>
-                            
+
                         )
                     })}
                 </div>

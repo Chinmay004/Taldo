@@ -55,23 +55,46 @@ const benefits = [
     description: "Regulated 38–40 hour workweeks",
   },
   {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-        <g clipPath="url(#clip0_1_106)">
-          <path d="M35 32.5H5V7.5" stroke="#233CC5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M31.25 11.25L20 22.5L15 17.5L5 27.5" stroke="#233CC5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M31.25 17.5V11.25H25" stroke="#233CC5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </g>
-        <defs>
-          <clipPath id="clip0_1_106">
-            <rect width="40" height="40" fill="white" />
-          </clipPath>
-        </defs>
-      </svg>
-    ),
-    title: "Social benefits",
-    description: "Free education, healthcare and subsidized benefits",
-  },
+  icon: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+    >
+      {/* Coin outline */}
+      <circle
+        cx="20"
+        cy="20"
+        r="13"
+        stroke="#233CC5"
+        strokeWidth="2"
+      />
+
+      {/* Inner ring */}
+      <circle
+        cx="20"
+        cy="20"
+        r="8"
+        stroke="#233CC5"
+        strokeWidth="2"
+        opacity="0.4"
+      />
+
+      {/* Rupee symbol */}
+      <path
+        d="M17 14H23M17 18H23M17 14C21 14 21 18 17 18L23 26"
+        stroke="#233CC5"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
+  title: "Paid Overtime",
+  description: "Get paid INR 1500+ / hour for overtime",
+},
   {
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -92,6 +115,24 @@ const benefits = [
     ),
     title: "Family Reunification",
     description: "Invite your spouse and children",
+  },
+  {
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <g clipPath="url(#clip0_1_106)">
+          <path d="M35 32.5H5V7.5" stroke="#233CC5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M31.25 11.25L20 22.5L15 17.5L5 27.5" stroke="#233CC5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M31.25 17.5V11.25H25" stroke="#233CC5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1_106">
+            <rect width="40" height="40" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    ),
+    title: "Social benefits",
+    description: "Free education, healthcare and subsidized benefits",
   },
 ];
 

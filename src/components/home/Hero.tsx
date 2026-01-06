@@ -39,29 +39,9 @@ export default function Hero() {
                 <line x1="7" y1="17" x2="17" y2="7" />
                 <polyline points="7 7 17 7 17 17" />
               </svg>
-              Apply now
+              Book your free consultation now
             </Link>
 
-            {/* CTA Button 2*/}
-            <Link
-              href="#contact"
-              className="flex w-fit items-center gap-3 rounded-full bg-white px-5 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium text-gray-900 transition-all hover:bg-white/90 hover:shadow-lg"
-            >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="7" y1="17" x2="17" y2="7" />
-                <polyline points="7 7 17 7 17 17" />
-              </svg>
-              Speak to a Program Advisor
-            </Link>
             </div>
           </div>
 
