@@ -48,16 +48,70 @@ export default function Contact() {
     state: "",
     education: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    // Clear message when user starts typing
+    if (message) setMessage(null);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setMessage(null);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "e77c5189-8692-47fa-9504-d260ec170aed",
+          subject: "Job Seeker Enquiry Form Submission",
+          from_name: formData.name,
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          state: formData.state,
+          education: formData.education,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setMessage({
+          type: "success",
+          text: "Thank you! Your enquiry has been submitted successfully.",
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          state: "",
+          education: "",
+        });
+      } else {
+        setMessage({
+          type: "error",
+          text: result.message || "Something went wrong. Please try again.",
+        });
+      }
+    } catch (error) {
+      setMessage({
+        type: "error",
+        text: "Failed to submit form. Please check your connection and try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -184,16 +238,29 @@ export default function Contact() {
             </div>
           </div>
 
+          {/* Success/Error Message */}
+          {message && (
+            <div
+              className={`rounded-md px-4 py-3 text-sm font-medium ${
+                message.type === "success"
+                  ? "bg-green-50 text-green-800 border border-green-200"
+                  : "bg-red-50 text-red-800 border border-red-200"
+              }`}
+            >
+              {message.text}
+            </div>
+          )}
+
           {/* Submit Button */}
           <div className="flex justify-center mt-2 md:mt-4">
-  <button
-    type="submit"
-    className="w-full sm:w-fit rounded-full bg-white px-8 md:px-10 py-3 md:py-3.5 text-base font-medium text-primary transition-all hover:bg-gray-100"
-  >
-    Submit
-  </button>
-</div>
-
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full sm:w-fit rounded-full bg-white px-8 md:px-10 py-3 md:py-3.5 text-base font-medium text-primary transition-all hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? "Submitting..." : "Submit"}
+            </button>
+          </div>
         </form>
         </div>
       </div>
