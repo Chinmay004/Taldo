@@ -32,7 +32,7 @@ export default function StartCareer() {
 
           {/* CTA Button */}
           <Link
-            href="/apply"
+            href="#contact"
             className="flex w-fit mx-auto lg:mx-0 items-center gap-3 rounded-full bg-accent px-5 md:px-6 py-3 md:py-4 text-sm md:text-base font-medium text-white transition-all hover:bg-primary-dark hover:shadow-lg"
           >
             <svg

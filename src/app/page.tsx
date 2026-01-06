@@ -15,7 +15,7 @@ export default function Home() {
       <StartCareer />
       <ProgramOverview />
       <SuccessStories/>
-      <Webinar/>
+      {/* <Webinar/> */}
       <FAQ/>
       <Testimonials/>
     </main>

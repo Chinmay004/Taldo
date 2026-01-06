@@ -123,7 +123,7 @@ export default function ProgramOverview() {
             A structured, end-to-end program designed for Indian nurses who want to build successful careers in Germany.
           </p>
           <Link
-            href="/program"
+            href="/nurses-to-germany#program-overview"
             className="inline-flex items-center rounded-full bg-white px-5 md:px-6 py-2.5 md:py-3 text-sm md:text-base font-medium text-gray-900 transition-all hover:bg-white/90"
           >
             Read More

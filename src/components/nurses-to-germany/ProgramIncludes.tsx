@@ -4,7 +4,7 @@ export default function ProgramIncludes() {
     return (
         <div className="flex w-full flex-col items-center gap-6 md:gap-9 px-4 sm:px-6 lg:px-20 py-12 md:py-16 max-w-[1400px] mx-auto bg-white text-center">
             {/* Header Section */}
-            <div className="flex w-full flex-col items-center gap-2 md:gap-3">
+            <div id="program-overview" className="flex w-full flex-col items-center gap-2 md:gap-3">
                 <h1 className="w-full text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-medium leading-tight tracking-tight text-gray-900">
                     <span>Gateway to </span>
                     <span className="text-accent">Germany</span>
