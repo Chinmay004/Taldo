@@ -11,6 +11,7 @@ const footerColumns = [
           { name: "About Us", href: "/about" },
           { name: "Recruiters", href: "/recruiters" },
           { name: "Nurses to Germany", href: "/nurses-to-germany" },
+          { name: "Webinar", href: "/webinar" },
           { name: "Blog", href: "/blog" },
         ],
       },
@@ -102,16 +103,19 @@ export default function Footer() {
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20 pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8">
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8 lg:gap-12">
           {/* Logo */}
-          <div className="shrink-0 lg:w-1/5">
-            <Link href="/">
-              <Image
-                src="/Taldo_Horizontal Logo 1.svg"
-                alt="Taldo"
-                width={104}
-                height={38}
-                className="h-8 w-auto md:h-10"
-              />
-            </Link>
+          <div className="flex flex-col">
+            <div className="shrink-0 lg:w-1/5">
+              <Link href="/">
+                <Image
+                  src="/Taldo_Horizontal Logo 1.svg"
+                  alt="Taldo"
+                  width={104}
+                  height={38}
+                  className="h-8 w-auto md:h-10"
+                />
+              </Link>
+            </div>
+            <p className="mt-5"> Taldo is a transparent and ethical career accelerator for professionals pursuing global careers</p>
           </div>
 
           {/* Navigation Columns */}

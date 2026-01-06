@@ -11,32 +11,32 @@ const stories = [
   },
   {
     id: 2,
-    embedUrl: "https://www.youtube.com/embed/eQ23qmDEa_Q",
+    embedUrl: "https://www.youtube.com/embed/Gkykh0qXkxc",
     title: "Success Story 2",
   },
   {
     id: 3,
-    embedUrl: "https://www.youtube.com/embed/eQ23qmDEa_Q",
+    embedUrl: "https://www.youtube.com/embed/PDrFXZtNJMs",
     title: "Success Story 3",
   },
   {
     id: 4,
-    embedUrl: "https://www.youtube.com/embed/eQ23qmDEa_Q",
+    embedUrl: "https://www.youtube.com/embed/Vd_F6DkD-QU",
     title: "Success Story 4",
   },
   {
     id: 5,
-    embedUrl: "https://www.youtube.com/embed/OEVo415sU2I",
+    embedUrl: "https://www.youtube.com/embed/z2nABN8ht8Y",
     title: "Success Story 5",
   },
   {
     id: 6,
-    embedUrl: "https://www.youtube.com/embed/OEVo415sU2I",
+    embedUrl: "https://www.youtube.com/embed/iz41cvKt2cY",
     title: "Success Story 6",
   },
   {
     id: 7,
-    embedUrl: "https://www.youtube.com/embed/psmpO25abls",
+    embedUrl: "https://www.youtube.com/embed/6FBwSDJ4TIA",
     title: "Success Story 7",
   },
 ];
@@ -70,7 +70,7 @@ export default function SuccessStories() {
       {/* Header - contained */}
       <div className="mx-auto mb-6 md:mb-8 flex max-w-[1400px] items-center justify-center md:justify-between flex-col md:flex-row gap-4 px-4 sm:px-6 lg:px-20">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight text-gray-900 text-center md:text-left">
-          Success <span className="text-accent">Stories</span>
+          Webinar <span className="text-accent"></span>
         </h2>
 
         {/* Navigation Arrows */}

@@ -14,9 +14,9 @@ export default function StartCareer() {
         {/* Left Content */}
         <div className="flex max-w-full lg:max-w-xl flex-col text-center lg:text-left items-center lg:items-start">
           {/* Title */}
-          <h2 className="mb-4 md:mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight text-gray-900">
+          {/* <h2 className="mb-4 md:mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight text-gray-900">
             Start Your <span className="text-accent">International</span> Career Today
-          </h2>
+          </h2> */}
 
           {/* Bullet Points */}
           <ul className="mb-6 md:mb-8 flex flex-col gap-3 md:gap-4 text-left">
@@ -32,7 +32,7 @@ export default function StartCareer() {
 
           {/* CTA Button */}
           <Link
-            href="/apply"
+            href="#contact"
             className="flex w-fit mx-auto lg:mx-0 items-center gap-3 rounded-full bg-accent px-5 md:px-6 py-3 md:py-4 text-sm md:text-base font-medium text-white transition-all hover:bg-primary-dark hover:shadow-lg"
           >
             <svg
