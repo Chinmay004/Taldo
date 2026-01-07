@@ -11,7 +11,7 @@ export default function StepByStepJourney() {
     ];
 
     return (
-        <section className="relative w-full overflow-hidden py-12 md:py-16 lg:py-20">
+        <section className="relative w-full overflow-hidden py-6 md:py-8 lg:py-10">
             {/* Background Wave Decorations */}
             <div className="absolute bottom-0 left-0 right-0 z-0">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="373" viewBox="0 0 1440 373" fill="none" className="w-full" preserveAspectRatio="none">

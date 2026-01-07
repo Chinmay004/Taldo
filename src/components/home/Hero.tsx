@@ -19,12 +19,12 @@ export default function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-6">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mt-4 sm:mt-6">
 
             {/* CTA Button */}
             <Link
               href="#contact"
-              className="flex w-fit items-center gap-3 rounded-full bg-white px-5 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium text-gray-900 transition-all hover:bg-white/90 hover:shadow-lg"
+              className="flex w-fit items-center gap-3 whitespace-nowrap rounded-full bg-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-base font-medium text-gray-900 transition-all hover:bg-white/90 hover:shadow-lg"
             >
               <svg
                 width="20"
@@ -39,7 +39,7 @@ export default function Hero() {
                 <line x1="7" y1="17" x2="17" y2="7" />
                 <polyline points="7 7 17 7 17 17" />
               </svg>
-              Book your free consultation now
+              Book your free consultation
             </Link>
 
             </div>

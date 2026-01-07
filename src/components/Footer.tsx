@@ -11,8 +11,8 @@ const footerColumns = [
           { name: "About Us", href: "/about" },
           { name: "Recruiters", href: "/recruiters" },
           { name: "Nurses to Germany", href: "/nurses-to-germany" },
-          { name: "Webinar", href: "/webinar" },
-          { name: "Blog", href: "/blog" },
+          // { name: "Webinar", href: "/webinar" },
+          // { name: "Blog", href: "/blog" },
         ],
       },
     ],
@@ -22,8 +22,8 @@ const footerColumns = [
       {
         title: "RESOURCES",
         links: [
-          { name: "Enquire Now", href: "/#contact" },
-          { name: "Success Stories", href: "/#success-stories" },
+          { name: "Webinar", href: "/webinar" },
+          { name: "Blog", href: "/blog" },
         ],
       },
     ],
@@ -103,7 +103,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20 pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8">
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8 lg:gap-12">
           {/* Logo */}
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <div className="shrink-0 lg:w-1/5">
               <Link href="/">
                 <Image
@@ -115,9 +115,27 @@ export default function Footer() {
                 />
               </Link>
             </div>
-            <p className="mt-5"> Taldo is a transparent and ethical career accelerator for professionals pursuing global careers</p>
-          </div>
 
+            <p className="mt-5">
+              Taldo is a transparent and ethical career accelerator for professionals pursuing global careers
+            </p>
+
+            {/* Social Links – moved here */}
+            <div className="mt-5 flex items-center gap-6 md:gap-8">
+              {socialLinks.map((social) => (
+                <Link
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-text transition-colors hover:text-primary"
+                  aria-label={social.name}
+                >
+                  {social.icon}
+                </Link>
+              ))}
+            </div>
+          </div>
           {/* Navigation Columns */}
           {footerColumns.map((column, colIndex) => (
             <div key={colIndex} className="flex flex-col gap-8 md:gap-12 lg:w-1/5 w-full items-center lg:items-start">
@@ -147,32 +165,13 @@ export default function Footer() {
 
       {/* Full Width Divider */}
       <div className="w-full h-px bg-gray-200" />
-
       {/* Bottom Section */}
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20 py-6 md:py-8">
-        <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4">
-          {/* Copyright */}
-          <p className="text-xs md:text-sm text-gray-text text-center sm:text-left">
-            ©2025 Taldo. All rights reserved
-          </p>
-
-          {/* Social Links */}
-          <div className="flex items-center gap-6 md:gap-10">
-            {socialLinks.map((social) => (
-              <Link
-                key={social.name}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-text transition-colors hover:text-primary"
-                aria-label={social.name}
-              >
-                {social.icon}
-              </Link>
-            ))}
-          </div>
-        </div>
+        <p className="text-xs md:text-sm text-gray-text text-center">
+          ©2025 Taldo. All rights reserved
+        </p>
       </div>
+
     </footer>
   );
 }

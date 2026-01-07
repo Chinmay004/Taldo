@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Newsletter from '@/components/home/Newsletter';
+import blogs from '@/data/blogs.json';
+// import Newsletter from '@/components/home/Newsletter';
 
 async function getBlogs() {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
@@ -70,7 +71,7 @@ export default async function BlogListingPage() {
             </section>
 
             {/* Newsletter Section */}
-            <Newsletter />
+            {/* <Newsletter /> */}
         </main>
     );
 }
