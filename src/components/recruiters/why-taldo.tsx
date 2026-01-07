@@ -71,7 +71,7 @@ export default function WhyTaldo() {
         {/* CTA Button */}
         <div className="flex justify-center mt-8 md:mt-10">
           <Link
-            href="#contact"
+            href="/#contact"
             className="flex items-center gap-3 rounded-full bg-accent px-5 md:px-6 py-3 md:py-4 text-sm md:text-base font-medium text-white transition-all hover:bg-primary-dark hover:shadow-lg"
           >
             <svg

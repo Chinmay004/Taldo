@@ -14,10 +14,10 @@ export default function Home() {
       <WhyGermany />
       {/* <StartCareer /> */}
       <ProgramOverview />
-      <SuccessStories/>
       <Testimonials/>
-      {/* <Webinar/> */}
+      <SuccessStories/>
       <FAQ/>
+      {/* <Webinar/> */}
     </main>
   );
 }
