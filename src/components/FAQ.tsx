@@ -49,7 +49,7 @@ export default function FAQ() {
   const displayedFaqs = showAll ? faqs : faqs.slice(0, 5);
 
   return (
-    <section className="w-full bg-white py-12 md:py-16 lg:py-20">
+    <section className="w-full bg-white py-12 md:py-16 lg:py-12">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20 flex flex-col items-center">
         {/* Title */}
         <h2 className="mb-8 md:mb-10 text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight text-gray-900 text-center">

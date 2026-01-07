@@ -105,7 +105,7 @@ export default function ProgramOverview() {
           fill
           className="object-cover"
         />
-        {/* <div className="absolute inset-0 bg-black/60"/> */}
+        <div className="absolute inset-0 bg-black/20"/>
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.20)_0%,#000_100.06%)]" />
         {/* Dark Overlay */}
@@ -117,7 +117,7 @@ export default function ProgramOverview() {
         {/* Header Section */}
         <div className="mb-8 md:mb-10 max-w-4xl mx-auto lg:mx-0 text-center lg:text-left">
           <h2 className="mb-3 md:mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight text-white">
-            Taldo’s <span className="text-blue-900">Gateway to Germany Program</span>
+            Taldo’s <span className="text-yellow-400">Gateway to Germany</span> Program
           </h2>
           <p className="mb-4 md:mb-6 text-sm sm:text-base md:text-lg leading-relaxed text-white/90">
             A structured, end-to-end program designed for Indian nurses who want to build successful careers in Germany.
