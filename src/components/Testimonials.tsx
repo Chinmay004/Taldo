@@ -67,7 +67,7 @@ export default function Testimonials() {
 
 
     return (
-        <section id="testimonials" className="w-full bg-white py-6 md:py-8 lg:py-2 mb-15">
+        <section id="testimonials" className="w-full bg-white py-12 md:py-16 lg:py-20">
             <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20">
 
                 {/* Heading + Arrows */}
@@ -84,7 +84,7 @@ export default function Testimonials() {
       onClick={() => scroll("left")}
       disabled={!canScrollLeft}
       className={`
-        flex h-12 w-12 items-center justify-center rounded-full border-2 transition-all
+        flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full border-2 transition-all
         ${canScrollLeft
           ? "border-accent text-accent hover:bg-gray-700 hover:text-white"
           : "border-gray-300 text-gray-300 cursor-not-allowed"
@@ -112,7 +112,7 @@ export default function Testimonials() {
       onClick={() => scroll("right")}
       disabled={!canScrollRight}
       className={`
-        flex h-12 w-12 items-center justify-center rounded-full transition-all
+        flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full transition-all
         ${canScrollRight
           ? "bg-accent text-white hover:bg-gray-800"
           : "bg-gray-300 text-white cursor-not-allowed"
