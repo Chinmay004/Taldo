@@ -1,16 +1,18 @@
 import YouTubeShorts from "@/components/webinar/YouTubeShorts";
+import { prisma } from "@/lib/prisma";
 
 async function getWebinars() {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const res = await fetch(`${baseUrl}/api/webinars`, {
-        next: { revalidate: 60 },
-    });
-
-    if (!res.ok) {
+    try {
+        const webinars = await prisma.webinar.findMany({
+            where: { published: true },
+            orderBy: { order: 'asc' },
+        });
+        return webinars;
+    } catch (error) {
+        console.error('Error fetching webinars from database:', error);
+        // Return empty array if database connection fails during build
         return [];
     }
-
-    return res.json();
 }
 
 export default async function Webinar() {
