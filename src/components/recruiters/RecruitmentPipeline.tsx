@@ -160,7 +160,7 @@ export default function RecruitmentPipeline() {
   ];
 
   return (
-    <section className="relative w-full bg-white py-12 md:py-16 lg:py-20">
+    <section className="relative w-full bg-white py-12 md:py-16 lg:py-14">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20">
         {/* Heading Section */}
         <div className="mb-8 md:mb-12 flex flex-col gap-2 md:gap-2">

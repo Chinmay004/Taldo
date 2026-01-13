@@ -29,7 +29,7 @@ export default function WhyTaldo() {
   ];
 
   return (
-    <section className="w-full bg-white py-12 md:py-16 lg:py-20">
+    <section className="w-full bg-white py-8 md:py-9 lg:py-10">
       <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20">
         {/* Heading */}
         <div className="flex flex-col items-center text-center gap-4 md:gap-6 mb-8 md:mb-12">

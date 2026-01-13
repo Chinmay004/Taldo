@@ -5,40 +5,79 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "Who is eligible?",
-    answer: "GNM, BSc, Post BSC Nursing & MSC Nursing graduates with valid registration.",
+    question: "Who is eligible to apply for this Germany nursing program?",
+    answer:
+      "GNM, BSc, Post BSc and MSc Nursing graduates with valid nursing registration in India are eligible to apply. Both freshers and experienced nurses can join, though at least 1 year of clinical experience is preferred for some German employers and states.",
   },
   {
-    question: "What salary can I expect?",
-    answer: "Pre-recognition salary of ~ INR 2.5 Lakhs / month and Post-recognition salary of ~ INR 3.5 Lakhs. Additional over-time pay of about ~ INR 1500 / hour.",
+    question: "Do I need German language skills before joining Taldo?",
+    answer:
+      "No, you do not need any prior German knowledge to start. Taldo provides structured German language training from A1 up to B2 level, which is the level generally required to work as a registered nurse in Germany.",
   },
   {
-    question: "Do I need German skills before joining?",
-    answer: "No prior German knowledge is required. We provide comprehensive German language training from A1 to B2 level as part of the program.",
+    question: "What German level do I need to work as a nurse in Germany?",
+    answer:
+      "Most German employers and state authorities require at least B2 level German for full nursing registration, although some allow you to travel with B1 and complete B2 or an adaptation program there. Taldo’s program is designed to take you from beginner to B2 so you meet these requirements.",
   },
   {
-    question: "How long does the process take?",
-    answer: "Around 9–14 months depending on your language training progress, examination and Visa process.",
+    question: "How long does the overall process take from India to Germany?",
+    answer:
+      "On average, the journey takes around 9–14 months from joining the program to reaching Germany, depending on your pace in German language learning, exam completion, document recognition and visa processing. Fast movers who clear B2 quickly may finish sooner, while delays in exams or documentation can extend timelines slightly.",
   },
   {
-    question: "Is there a job guarantee?",
-    answer: "Yes, we guarantee employer interviews and job placement assistance for all candidates who successfully complete the program and qualify B2 exam.",
+    question: "Do I need work experience, or can fresh nursing graduates also apply?",
+    answer:
+      "Fresh GNM and BSc Nursing graduates can apply as long as they hold recognised nursing qualifications and valid registration. However, having 1–2 years of clinical experience can improve your profile and is preferred by many German employers.",
   },
   {
-    question: "Can I take my family later?",
-    answer: "Yes, once you are settled in Germany, you can apply for family reunification to bring your spouse and children.",
+    question: "What salary can I expect as an Indian nurse in Germany?",
+    answer:
+      "Typical entry-level salaries for nurses in Germany range from about ₹2.5–3 lakh per month before full recognition, increasing to around ₹3.5–4 lakh or more after recognition, depending on region and employer. In addition, nurses usually receive overtime pay, night shift allowance, health insurance, pension and paid leave, which further increases total earnings.",
+  },
+  {
+    question: "Is there a job guarantee with Taldo?",
+    answer:
+      "Taldo offers guaranteed employer interviews and end-to-end job placement support for candidates who complete the program and clear the required German level (typically B2). Final hiring decisions are always made by German hospitals or care facilities, but the program is built to guide you until you secure an offer and relocate.",
+  },
+  {
+    question: "What kind of support do I get for visa and documentation?",
+    answer:
+      "You receive guidance for document collection, translations, recognition (Anerkennung) process, visa file preparation and embassy appointments so your application matches German requirements. This includes support in understanding checklists, timelines and any additional proofs requested by the embassy or authorities.",
+  },
+  {
+    question: "Can I take my family to Germany later?",
+    answer:
+      "Yes, after you are settled and meet income and housing requirements, you can apply for a German family reunification visa to bring your spouse and dependent children. Your spouse usually needs at least A1-level German, and children above certain ages may also need language proof as per German rules.",
   },
   {
     question: "Is the training online or offline?",
-    answer: "We offer both online and offline training options (at select centres) to suit your convenience and learning preferences.",
+    answer:
+      "Taldo offers a blend of online classes and offline training at select centres so you can choose what suits your work schedule and location. Live online sessions, recorded lectures and practice tests make it possible to learn German and prepare for Germany even while working full-time.",
   },
   {
-    question: "What if I fail an exam?",
-    answer: "We provide additional support and re-training if needed. Our goal is to ensure your success throughout the program.",
+    question: "What happens if I fail a German exam?",
+    answer:
+      "If you do not clear an exam on the first attempt, you can reattempt after additional classes, doubt-clearing sessions and targeted practice support from the training team. The focus is on helping you understand mistakes, strengthen weak areas and pass with confidence rather than rushing you through the process.",
   },
   {
-    question: "Are there hidden charges?",
-    answer: "No, we maintain complete transparency. All costs are communicated upfront with no hidden fees.",
+    question: "Are there any hidden charges in the program?",
+    answer:
+      "Reputable Germany-nursing programs are expected to be transparent about all fees, including training, exams, documentation and visa-related costs. Taldo follows a clear, upfront pricing structure so that you know your financial commitment in advance, with no hidden charges later in the journey.",
+  },
+  {
+    question: "Do I have to pay any recruitment commission to German hospitals?",
+    answer:
+      "Ethical recruitment guidelines in Germany discourage charging nurses placement commissions, and many compliant agencies highlight that candidates do not pay recruitment fees to employers. Taldo’s model is aligned with fair-recruitment practices, so you do not pay separate commission to hospitals for your job.",
+  },
+  {
+    question: "Can I change hospitals or cities in Germany later?",
+    answer:
+      "After you complete your initial contract and achieve full recognition as a registered nurse, you are usually free to switch employers or move to other German states subject to notice periods and contract terms. Many Indian nurses use this flexibility to move to cities that better match their family, salary or lifestyle preferences over time.",
+  },
+  {
+    question: "Is Germany safe for Indian nurses, especially women?",
+    answer:
+      "Germany is widely regarded as a safe country with strong labour laws, regulated working hours and clear employee rights for healthcare workers. Hospitals and care facilities operate under strict standards, and Indian nurses often highlight professional work environments and better work-life balance compared to many local settings.",
   },
 ];
 
@@ -49,7 +88,7 @@ export default function FAQ() {
   const displayedFaqs = showAll ? faqs : faqs.slice(0, 5);
 
   return (
-    <section className="w-full bg-white py-12 md:py-16 lg:py-20">
+    <section className="w-full bg-white py-12 md:py-16 lg:py-12">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20 flex flex-col items-center">
         {/* Title */}
         <h2 className="mb-8 md:mb-10 text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight text-gray-900 text-center">

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Newsletter from '@/components/home/Newsletter';
+import blogs from '@/data/blogs.json';
+// import Newsletter from '@/components/home/Newsletter';
 import { BlogRecord, getPublishedBlogs } from '@/lib/blogs';
 
 export default async function BlogListingPage() {
@@ -58,7 +59,7 @@ export default async function BlogListingPage() {
             </section>
 
             {/* Newsletter Section */}
-            <Newsletter />
+            {/* <Newsletter /> */}
         </main>
     );
 }
