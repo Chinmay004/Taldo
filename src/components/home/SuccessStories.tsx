@@ -153,7 +153,7 @@ export default function SuccessStories() {
         <div className="w-4 sm:w-6 lg:w-20 shrink-0" aria-hidden="true" />
       </div>
 
-      <div className="mt-8 md:mt-10 flex justify-center w-full pr-4 md:pr-8 lg:pr-28">
+      <div className="mt-8 md:mt-10 flex justify-center w-full">
 
       {/* CTA Button */}
           <Link

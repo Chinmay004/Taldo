@@ -15,7 +15,7 @@ export default function Team() {
         {
             name: "Sweta Jain",
             image: "/about/sweta-jain.webp",
-            description: "Sweta is a qualified actuary and language expert, proficient in 3 international languages, including Spanish (B2), Korean (Level 3), and German (B1/B2). She has taught 100+ students and leads training quality, cultural orientation, and candidate mentorship.",
+            description: "Sweta is a qualified actuary and language expert, proficient in 3 international languages, including Spanish (B2), Korean (Level 3), and German. She has taught 100+ students and leads training quality, cultural orientation, and candidate mentorship.",
             icon: Instagram,
             link: "https://www.instagram.com/multilingual_mahila/"
         }
