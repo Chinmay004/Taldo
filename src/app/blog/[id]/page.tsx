@@ -2,51 +2,16 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import OtherBlogs from '@/components/OtherBlogs';
 import ShareButtons from '@/components/blog/ShareButtons';
-
-interface BlogPost {
-    id: string;
-    slug: string;
-    title: string;
-    date: string;
-    image: string;
-    intro: string;
-    content: Array<{
-        type: 'paragraph' | 'list';
-        content?: string; // for paragraphs
-        items?: string[]; // for lists
-    }>;
-}
-
-async function getAllBlogs() {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const res = await fetch(`${baseUrl}/api/blogs`, {
-        next: { revalidate: 60 },
-    });
-
-    if (!res.ok) {
-        return [];
-    }
-
-    return res.json();
-}
-
-async function getBlog(slug: string) {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const res = await fetch(`${baseUrl}/api/blogs/${slug}`, {
-        next: { revalidate: 60 },
-    });
-
-    if (!res.ok) {
-        return null;
-    }
-
-    return res.json();
-}
+import {
+    BlogRecord,
+    getPublishedBlog,
+    getPublishedBlogs,
+} from '@/lib/blogs';
 
 export async function generateStaticParams() {
-    const blogs = await getAllBlogs();
+    const blogs = await getPublishedBlogs();
     if (!Array.isArray(blogs)) return [];
-    return blogs.map((blog: any) => ({
+    return blogs.map((blog: BlogRecord) => ({
         id: blog.slug,
     }));
 }
@@ -57,8 +22,11 @@ export default async function BlogPage({
     params: Promise<{ id: string }>;
 }) {
     const { id } = await params;
-    const blog = await getBlog(id);
-    const allBlogs = await getAllBlogs();
+    if (!id) {
+        notFound();
+    }
+    const blog = await getPublishedBlog(id);
+    const allBlogs = await getPublishedBlogs();
 
     if (!blog) {
         notFound();
@@ -134,7 +102,7 @@ export default async function BlogPage({
                                 {blog.paragraphs?.map((p: string, i: number) => (
                                     <p key={`p-${i}`} className="font-normal text-base md:text-lg lg:text-xl leading-relaxed text-gray-900 mb-6 md:mb-8 lg:mb-10">{p}</p>
                                 ))}
-                                {blog.bulletPoints?.length > 0 && (
+                                {Array.isArray(blog.bulletPoints) && blog.bulletPoints.length > 0 && (
                                     <div className="flex flex-col gap-4 md:gap-5 lg:gap-6 mt-2">
                                         {blog.bulletPoints.map((point: string, i: number) => (
                                             <div key={`b-${i}`} className="flex items-start gap-3 md:gap-4">
