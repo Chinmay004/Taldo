@@ -1,7 +1,7 @@
-"use client";
+// "use client";
 
-import Image from "next/image";
-import { useState } from "react";
+// import Image from "next/image";
+// import { useState } from "react";
 
 export default function Newsletter() {
   const [email, setEmail] = useState("");
@@ -51,23 +51,23 @@ export default function Newsletter() {
     }
   };
 
-  return (
-    <section className="w-full bg-white py-12 md:py-16 lg:py-20">
-      <div className="mx-auto flex max-w-[1400px] flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16 px-4 sm:px-6 lg:px-20">
-        {/* Left Content */}
-        <div className="flex max-w-full lg:max-w-xl flex-col text-center lg:text-left items-center lg:items-start">
-          {/* Title */}
-          <h2 className="mb-6 md:mb-8 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gray-900">
-            Discover Articles
-            <br />
-            & Blogs daily
-          </h2>
+//   return (
+//     <section className="w-full bg-white py-12 md:py-16 lg:py-20">
+//       <div className="mx-auto flex max-w-[1400px] flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16 px-4 sm:px-6 lg:px-20">
+//         {/* Left Content */}
+//         <div className="flex max-w-full lg:max-w-xl flex-col text-center lg:text-left items-center lg:items-start">
+//           {/* Title */}
+//           <h2 className="mb-6 md:mb-8 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+//             Discover Articles
+//             <br />
+//             & Blogs daily
+//           </h2>
 
-          {/* Subtitle */}
-          <p className="mb-4 md:mb-6 text-base md:text-lg text-gray-900">
-            Subscribe and get weekly email with{" "}
-            <span className="font-semibold">latest articles</span>
-          </p>
+//           {/* Subtitle */}
+//           <p className="mb-4 md:mb-6 text-base md:text-lg text-gray-900">
+//             Subscribe and get weekly email with{" "}
+//             <span className="font-semibold">latest articles</span>
+//           </p>
 
           {/* Email Form */}
           <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full sm:w-auto">
@@ -100,16 +100,16 @@ export default function Newsletter() {
           </form>
         </div>
 
-        {/* Right Image */}
-        <div className="relative h-56 sm:h-64 md:h-80 lg:h-[362px] w-full lg:w-[510px] shrink-0 overflow-hidden rounded-2xl lg:rounded-3xl">
-          <Image
-            src="/home/newsletter.webp"
-            alt="People studying"
-            fill
-            className="object-cover"
-          />
-        </div>
-      </div>
-    </section>
-  );
-}
+//         {/* Right Image */}
+//         <div className="relative h-56 sm:h-64 md:h-80 lg:h-[362px] w-full lg:w-[510px] shrink-0 overflow-hidden rounded-2xl lg:rounded-3xl">
+//           <Image
+//             src="/home/newsletter.webp"
+//             alt="People studying"
+//             fill
+//             className="object-cover"
+//           />
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
