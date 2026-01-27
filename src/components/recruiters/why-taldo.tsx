@@ -29,7 +29,7 @@ export default function WhyTaldo() {
   ];
 
   return (
-    <section className="w-full bg-white py-12 md:py-16 lg:py-20">
+    <section className="w-full bg-white py-8 md:py-9 lg:py-10">
       <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-20">
         {/* Heading */}
         <div className="flex flex-col items-center text-center gap-4 md:gap-6 mb-8 md:mb-12">
@@ -71,7 +71,7 @@ export default function WhyTaldo() {
         {/* CTA Button */}
         <div className="flex justify-center mt-8 md:mt-10">
           <Link
-            href="/#contact"
+            href="https://calendar.app.google/MA13LWvgFHEQdiQt8"
             className="flex items-center gap-3 rounded-full bg-accent px-5 md:px-6 py-3 md:py-4 text-sm md:text-base font-medium text-white transition-all hover:bg-primary-dark hover:shadow-lg"
           >
             <svg
