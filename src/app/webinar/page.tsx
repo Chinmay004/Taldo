@@ -1,18 +1,25 @@
 import YouTubeShorts from "@/components/webinar/YouTubeShorts";
 import UpcomingWebinars from "@/components/webinar/UpcomingWebinars";
-
 import { prisma } from "@/lib/prisma";
+
+// Force dynamic rendering to avoid build-time fetch issues
+export const dynamic = 'force-dynamic';
 
 async function getWebinars() {
     try {
-        const webinars = await prisma.webinar.findMany({
-            where: { published: true },
-            orderBy: { order: 'asc' },
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+        const res = await fetch(`${baseUrl}/api/webinars`, {
+            cache: 'no-store',
         });
-        return webinars;
+
+        if (!res.ok) {
+            return [];
+        }
+
+        return res.json();
     } catch (error) {
-        console.error('Error fetching webinars from database:', error);
-        // Return empty array if database connection fails during build
+        // During build time, API may not be available
+        console.log('Error fetching webinars during build, using empty array:', error);
         return [];
     }
 }
