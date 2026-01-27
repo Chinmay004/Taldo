@@ -3,7 +3,8 @@
 import { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { FileText, Video, LayoutDashboard, LogOut, Settings } from 'lucide-react';
+import { FileText, Video, LayoutDashboard, LogOut, Settings, Calendar } from 'lucide-react';
+
 
 export default function AdminLayout({
     children,
@@ -117,6 +118,18 @@ export default function AdminLayout({
                         <Video size={20} />
                         <span className="font-medium">Webinars</span>
                     </Link>
+
+                    <Link
+                        href="/admin/live-webinars"
+                        className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${pathname.startsWith('/admin/live-webinars')
+                            ? 'bg-primary text-white'
+                            : 'text-gray-700 hover:bg-gray-100'
+                            }`}
+                    >
+                        <Calendar size={20} />
+                        <span className="font-medium">Live Events</span>
+                    </Link>
+
 
                     <Link
                         href="/admin/settings"

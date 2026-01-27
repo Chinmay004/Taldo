@@ -60,3 +60,17 @@ model Webinar {
 
   @@index([published, order])
 }
+
+/// Live Webinars / Events
+model LiveWebinar {
+  id          String   @id @default(cuid())
+  title       String
+  date        DateTime
+  image       String   @db.Text
+  link        String?
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([published, date])
+}
