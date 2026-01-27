@@ -1,5 +1,6 @@
 import YouTubeShorts from "@/components/webinar/YouTubeShorts";
 import UpcomingWebinars from "@/components/webinar/UpcomingWebinars";
+import { prisma } from "@/lib/prisma";
 
 // Force dynamic rendering to avoid build-time fetch issues
 export const dynamic = 'force-dynamic';

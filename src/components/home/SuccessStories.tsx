@@ -66,7 +66,7 @@ export default function SuccessStories() {
   };
 
   return (
-    <section className="w-full overflow-hidden bg-white py-12 md:py-16 lg:py-20" id="success-stories">
+    <section className="w-full overflow-hidden bg-white py-8 md:py-10 lg:py-12" id="success-stories">
       {/* Header - contained */}
       <div className="mx-auto mb-6 md:mb-8 flex max-w-[1400px] items-center justify-center md:justify-between flex-col md:flex-row gap-4 px-4 sm:px-6 lg:px-20">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight text-gray-900 text-center md:text-left">
@@ -153,7 +153,7 @@ export default function SuccessStories() {
         <div className="w-4 sm:w-6 lg:w-20 shrink-0" aria-hidden="true" />
       </div>
 
-      <div className="mt-8 md:mt-10 flex justify-end w-full pr-4 md:pr-8 lg:pr-28">
+      <div className="mt-8 md:mt-10 flex justify-center w-full">
 
       {/* CTA Button */}
           <Link
