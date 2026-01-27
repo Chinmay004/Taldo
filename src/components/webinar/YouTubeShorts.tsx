@@ -50,7 +50,7 @@ export default function YouTubeShorts({ webinars }: YouTubeShortsProps) {
       <div className="mx-auto mb-6 md:mb-8 flex max-w-[1400px] items-center justify-center md:justify-between flex-col md:flex-row gap-4 px-4 sm:px-6 lg:px-20">
         <div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight text-gray-900 text-center md:text-left mb-2">
-            YouTube Shorts
+            Webinar
           </h2>
           <p className="text-gray-600 text-sm md:text-base text-center md:text-left">
             Watch our latest short-form content
@@ -65,8 +65,8 @@ export default function YouTubeShorts({ webinars }: YouTubeShortsProps) {
               onClick={() => scroll("left")}
               disabled={!canScrollLeft}
               className={`flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full border-2 transition-all ${canScrollLeft
-                  ? "border-accent text-accent hover:bg-accent hover:text-white"
-                  : "border-gray-300 text-gray-300 cursor-not-allowed"
+                ? "border-accent text-accent hover:bg-accent hover:text-white"
+                : "border-gray-300 text-gray-300 cursor-not-allowed"
                 }`}
               aria-label="Scroll left"
             >
@@ -89,8 +89,8 @@ export default function YouTubeShorts({ webinars }: YouTubeShortsProps) {
               onClick={() => scroll("right")}
               disabled={!canScrollRight}
               className={`flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full transition-all ${canScrollRight
-                  ? "bg-accent text-white hover:bg-primary-dark"
-                  : "bg-gray-300 text-white cursor-not-allowed"
+                ? "bg-accent text-white hover:bg-primary-dark"
+                : "bg-gray-300 text-white cursor-not-allowed"
                 }`}
               aria-label="Scroll right"
             >
