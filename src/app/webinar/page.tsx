@@ -1,18 +1,26 @@
 import YouTubeShorts from "@/components/webinar/YouTubeShorts";
 import UpcomingWebinars from "@/components/webinar/UpcomingWebinars";
 
+// Force dynamic rendering to avoid build-time fetch issues
+export const dynamic = 'force-dynamic';
 
 async function getWebinars() {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const res = await fetch(`${baseUrl}/api/webinars`, {
-        next: { revalidate: 60 },
-    });
+    try {
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+        const res = await fetch(`${baseUrl}/api/webinars`, {
+            cache: 'no-store',
+        });
 
-    if (!res.ok) {
+        if (!res.ok) {
+            return [];
+        }
+
+        return res.json();
+    } catch (error) {
+        // During build time, API may not be available
+        console.log('Error fetching webinars during build, using empty array:', error);
         return [];
     }
-
-    return res.json();
 }
 
 export default async function Webinar() {
