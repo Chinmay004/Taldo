@@ -141,7 +141,7 @@ export default function ProgramOverview() {
             {programFeatures.map((feature) => (
               <div
                 key={feature.title}
-                className="flex flex-col gap-2 md:gap-3 rounded-xl md:rounded-2xl bg-white/20 p-3 md:p-4 lg:p-5 text-white backdrop-blur-sm"
+                className="flex flex-col items-center text-center gap-2 md:gap-3 rounded-xl md:rounded-2xl bg-white/20 p-3 md:p-4 lg:p-5 text-white backdrop-blur-sm"
               >
                 {/* Icon */}
                 <div className="flex h-8 w-8 md:h-10 md:w-10 items-center justify-center">
