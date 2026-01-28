@@ -72,7 +72,7 @@ export default function Contact() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "e77c5189-8692-47fa-9504-d260ec170aed",
+          access_key: "564fcbe0-e0c3-486f-bcb9-666afc1b413f",
           subject: "Job Seeker Enquiry Form Submission",
           from_name: formData.name,
           name: formData.name,
